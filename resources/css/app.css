@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap");
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@layer components {
+    .title {
+        @apply font-medium uppercase tracking-widest transition duration-150 ease-in-out;
+    }
+    .btn {
+        @apply title border border-gray-800 bg-white  outline-offset-0 ring-gray-600 hover:border-gray-600 hover:ring-2;
+    }
+    .btn-md {
+        @apply px-9 py-[6px] text-sm;
+    }
+    /* ... */
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    content: "" !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    width: 70px !important;
+    height: 70px !important;
+}
