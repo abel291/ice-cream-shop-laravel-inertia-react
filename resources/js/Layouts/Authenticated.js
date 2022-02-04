@@ -47,7 +47,7 @@ export default function Authenticated({ auth, header, children }) {
                                         <span className="inline-flex">
                                             <button
                                                 type="button"
-                                                className="title inline-flex items-center border border-transparent bg-white  text-sm text-gray-800  hover:text-gray-600 focus:outline-none"
+                                                className="title inline-flex items-center border border-transparent bg-white  text-sm   hover:text-gray-600 focus:outline-none"
                                             >
                                                 {auth.user.name}
                                                 <ChevronDownIcon className="ml-1 h-4 w-4 " />
@@ -157,7 +157,7 @@ export default function Authenticated({ auth, header, children }) {
 
                     <div className="border-t border-gray-200 pt-4 pb-1">
                         <div className="px-4">
-                            <div className="text-base font-medium text-gray-800">
+                            <div className="text-base font-medium ">
                                 {auth.user.name}
                             </div>
                             <div className="text-sm font-medium text-gray-500">

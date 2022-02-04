@@ -2,6 +2,7 @@ import React from "react";
 import Authenticated from "@/Layouts/Authenticated";
 import { Head } from "@inertiajs/inertia-react";
 import Carousel from "@/Components/Carousel";
+import TwoSection from "./Home/TwoSection";
 
 export default function Dashboard(props) {
     const data = [
@@ -27,16 +28,7 @@ export default function Dashboard(props) {
             <div className="h-[calc(100vh-96px)] ">
                 <Carousel data={data} />
             </div>
-            {/* <div>
-                <div className="mx-auto">
-                    <div className="grid grid-cols-2">
-                        <div className="flex items-center">
-                            menu
-                        </div>
-                        <div className="py-28">menu</div>
-                    </div>
-                </div>
-            </div> */}
+            <TwoSection/>
         </Authenticated>
     );
 }

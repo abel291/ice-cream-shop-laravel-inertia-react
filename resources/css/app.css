@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+html {
+    @apply text-gray-700;
+}
 @layer components {
     .title {
         @apply font-medium uppercase tracking-widest transition duration-150 ease-in-out;
@@ -13,7 +17,6 @@
     .btn-md {
         @apply px-9 py-[6px] text-sm;
     }
-    /* ... */
 }
 
 .swiper-button-next:after,
