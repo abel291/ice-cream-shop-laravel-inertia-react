@@ -1,26 +1,45 @@
 import React from "react";
-import Authenticated from "@/Layouts/Authenticated";
-import { Head } from "@inertiajs/inertia-react";
+import AppLayout from "@/Layouts/AppLayout";
+import Carousel from "./Carousel";
+
+import TwoSectionMenu from "./TwoSectionMenu";
+import CarouselMenu from "./CarouselMenu";
+import TwoSectionHours from "./TwoSectionHours";
+import OneSection from "./OneSection";
+import TwoSectionItems from "./TwoSectionItems";
+import TwoSectionContactUs from "./TwoSectionContactUs";
 
 function Home(props) {
+    const data = [
+        {
+            path: "#",
+            text: "text-1",
+            image: "/img/home/img-6.png",
+        },
+        {
+            path: "#",
+            text: "text-2",
+            image: "/img/home/img-6.png",
+        },
+        {
+            path: "#",
+            text: "text-4",
+            image: "/img/home/img-6.png",
+        },
+    ];
+    
     return (
-        <Authenticated
-            auth={props.auth}
-            errors={props.errors}
-            
-        >
-            <Head title="Home" />
-
-            <div className="py-12">
-                <div className="container mx-auto">
-                    <div className="overflow-hidden bg-white shadow-sm sm:rounded-lg">
-                        <div className="border-b border-gray-200 bg-white p-6">
-                            You're logged in!
-                        </div>
-                    </div>
-                </div>
+        <AppLayout title="Inicio">
+            <div className="h-[calc(100vh-96px)] ">
+                <Carousel data={data} />
             </div>
-        </Authenticated>
+            <TwoSectionMenu />
+            <CarouselMenu data={data}/>
+            <TwoSectionHours />
+            <OneSection />
+            <TwoSectionItems />
+            <TwoSectionContactUs/>
+        </AppLayout>
     );
 }
 
