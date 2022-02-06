@@ -33,12 +33,12 @@ function Home(props) {
             <div className="h-[calc(100vh-96px)] ">
                 <Carousel data={data} />
             </div>
-            <TwoSectionMenu />
+             <TwoSectionMenu />
             <CarouselMenu data={data}/>
             <TwoSectionHours />
-            <OneSection />
+            {/*<OneSection />
             <TwoSectionItems />
-            <TwoSectionContactUs/>
+            <TwoSectionContactUs/> */}
         </AppLayout>
     );
 }

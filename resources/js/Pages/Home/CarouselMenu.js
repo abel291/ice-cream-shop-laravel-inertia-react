@@ -61,11 +61,11 @@ const CarouselMenu = ({ data, height = "500px" }) => {
             <button className="swiper-button-prev ">
                 <ChevronLeftIcon className="h-full w-full text-white " />
             </button>
-            <div className="mx-auto flex max-w-7xl items-center px-24 pt-32 pb-24">
+            <div className="mx-auto flex max-w-full items-center px-8 pt-32 pb-24 md:max-w-7xl md:px-10 lg:w-full lg:px-24">
                 <Swiper
                     modules={[Navigation, Autoplay]}
                     spaceBetween={80}
-                    slidesPerView={3}
+                    slidesPerView={1}
                     centeredSlides={true}
                     //navigation
                     // autoplay={{
@@ -81,7 +81,7 @@ const CarouselMenu = ({ data, height = "500px" }) => {
                         <SwiperSlide key={key}>
                             <div className="space-y-1 text-center text-white">
                                 <img
-                                    className="inline-block max-h-64 h-full"
+                                    className="inline-block h-full max-h-64"
                                     src={item.image}
                                     alt={item.image}
                                 />

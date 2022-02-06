@@ -3791,18 +3791,18 @@ var TwoSection = function TwoSection(_ref) {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
       className: "mx-auto",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "flex " + (reverse && "flex-row-reverse"),
+        className: "flex flex-col-reverse md:flex-row " + (reverse && "flex-row-reverse"),
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "w-1/2 ",
+          className: "w-full md:w-1/2 ",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
             src: img,
             className: "h-full w-full object-cover",
             alt: ""
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "w-1/2 ",
+          className: "w-full md:w-1/2 ",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            className: "px-[15%] py-[15%] pt-[20%]",
+            className: "px-[10%] pb-[18%] pt-[20%] lg:px-[15%]",
             children: children
           })
         })]
@@ -3816,7 +3816,7 @@ var TwoSectionTitle = function TwoSectionTitle(_ref2) {
       className = _ref2$className === void 0 ? "" : _ref2$className,
       children = _ref2.children;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
-    className: "title mb-7 w-full text-4xl" + " " + className,
+    className: "title mb-10 w-full text-5xl md:mb-7 md:text-4xl" + " " + className,
     children: children
   });
 };
@@ -3825,7 +3825,7 @@ var TwoSectionSubTitle = function TwoSectionSubTitle(_ref3) {
       className = _ref3$className === void 0 ? "" : _ref3$className,
       children = _ref3.children;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-    className: "font-script text-5xl text-gray-400" + " " + className,
+    className: "font-script  text-4xl md:text-5xl text-gray-400" + " " + className,
     children: children
   });
 };
@@ -5288,17 +5288,17 @@ var Carousel = function Carousel(_ref) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
     className: "relative flex h-full items-center overflow-hidden bg-orange-50",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
-      className: "swiper-button-next  ",
+      className: "swiper-button-next   ",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_heroicons_react_outline__WEBPACK_IMPORTED_MODULE_6__.ChevronRightIcon, {
         className: "h-full w-full text-gray-800 "
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
-      className: "swiper-button-prev ",
+      className: "swiper-button-prev  ",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_heroicons_react_outline__WEBPACK_IMPORTED_MODULE_6__.ChevronLeftIcon, {
         className: "h-full w-full text-gray-800 "
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-      className: "mx-auto flex max-w-7xl items-center px-16 py-8",
+      className: "flex max-w-full items-center px-8 md:px-10 lg:mx-auto lg:w-full lg:max-w-7xl lg:px-16 lg:py-8",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_1__.Swiper, {
         modules: [swiper__WEBPACK_IMPORTED_MODULE_2__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_2__.Autoplay],
         spaceBetween: 20,
@@ -5316,14 +5316,14 @@ var Carousel = function Carousel(_ref) {
         children: data.map(function (item, key) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_1__.SwiperSlide, {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-              className: "flex items-center",
+              className: "flex flex-col-reverse items-center md:flex-row",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-                className: "w-7/12 text-right",
+                className: "text-center md:w-8/12 md:pr-9 md:text-right",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h2", {
-                  className: "title text-6xl",
+                  className: "title text-3xl md:text-4xl lg:text-6xl",
                   children: "Lorem ipsum dolor sit amet consectetur"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-                  className: "mt-10",
+                  className: " mt-6 lg:mt-10 ",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_5__.Link, {
                     href: "#",
                     className: "btn btn-md ",
@@ -5331,10 +5331,10 @@ var Carousel = function Carousel(_ref) {
                   })
                 })]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-                className: "flex w-5/12 justify-center",
+                className: "text-center md:w-4/12",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
                   //className="object-cover w-full mx-auto"
-                  className: "max-h-96 ",
+                  className: "mb-6 inline-block h-52 max-h-96 md:h-full lg:mb-0 ",
                   src: item.image,
                   alt: item.image //style={{ height: height }}
 
@@ -5439,11 +5439,11 @@ var CarouselMenu = function CarouselMenu(_ref) {
         className: "h-full w-full text-white "
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
-      className: "mx-auto flex max-w-7xl items-center px-24 pt-32 pb-24",
+      className: "mx-auto flex max-w-full items-center px-8 pt-32 pb-24 md:max-w-7xl md:px-10 lg:w-full lg:px-24",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_1__.Swiper, {
         modules: [swiper__WEBPACK_IMPORTED_MODULE_2__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_2__.Autoplay],
         spaceBetween: 80,
-        slidesPerView: 3,
+        slidesPerView: 1,
         centeredSlides: true //navigation
         // autoplay={{
         //     delay: 2500,
@@ -5459,7 +5459,7 @@ var CarouselMenu = function CarouselMenu(_ref) {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
               className: "space-y-1 text-center text-white",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
-                className: "inline-block max-h-64 h-full",
+                className: "inline-block h-full max-h-64",
                 src: item.image,
                 alt: item.image
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("h2", {
@@ -5540,7 +5540,7 @@ function Home(props) {
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_TwoSectionMenu__WEBPACK_IMPORTED_MODULE_3__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_CarouselMenu__WEBPACK_IMPORTED_MODULE_4__["default"], {
       data: data
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_TwoSectionHours__WEBPACK_IMPORTED_MODULE_5__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_OneSection__WEBPACK_IMPORTED_MODULE_6__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_TwoSectionItems__WEBPACK_IMPORTED_MODULE_7__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_TwoSectionContactUs__WEBPACK_IMPORTED_MODULE_8__["default"], {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_TwoSectionHours__WEBPACK_IMPORTED_MODULE_5__["default"], {})]
   });
 }
 
@@ -5693,7 +5693,7 @@ var TwoSectionHours = function TwoSectionHours() {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Components_TwoSection__WEBPACK_IMPORTED_MODULE_1__.TwoSectionText, {
         children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eius- mod tempor incididunt ut labore et dolore."
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "space-y-3 px-8 ",
+        className: "space-y-3 md:px-8 ",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
           className: "title flex justify-between",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h6", {
@@ -5838,11 +5838,11 @@ var TwoSectionMenu = function TwoSectionMenu() {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Components_TwoSection__WEBPACK_IMPORTED_MODULE_0__.TwoSectionTitle, {
         children: "SABOR DELICIOSO"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "mb-10 grid grid-cols-2 gap-x-14 gap-y-5 text-left",
+        className: "mb-10 grid md:grid-cols-2 gap-x-14 gap-y-5 text-left",
         children: ["APPLE", "BLUEBERRY", "STRAWBERRY", "CHOCOLATE", "ORANGE", "PLUM", "VANILLA", "PISTACHIO"].map(function (item) {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-              className: "title mb-1 flex",
+              className: "title mb-2 flex",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h6", {
                 className: "",
                 children: item

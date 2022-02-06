@@ -11,13 +11,13 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
 const Carousel = ({ data, height = "500px" }) => {
     return (
         <div className="relative flex h-full items-center overflow-hidden bg-orange-50">
-            <button className="swiper-button-next  ">
+            <button className="swiper-button-next   ">
                 <ChevronRightIcon className="h-full w-full text-gray-800 " />
             </button>
-            <button className="swiper-button-prev ">
+            <button className="swiper-button-prev  ">
                 <ChevronLeftIcon className="h-full w-full text-gray-800 " />
             </button>
-            <div className="mx-auto flex max-w-7xl items-center px-16 py-8">
+            <div className="flex max-w-full items-center px-8 md:px-10 lg:mx-auto lg:w-full lg:max-w-7xl lg:px-16 lg:py-8">
                 <Swiper
                     modules={[Navigation, Autoplay]}
                     spaceBetween={20}
@@ -35,21 +35,21 @@ const Carousel = ({ data, height = "500px" }) => {
                 >
                     {data.map((item, key) => (
                         <SwiperSlide key={key}>
-                            <div className="flex items-center">
-                                <div className="w-7/12 text-right">
-                                    <h2 className="title text-6xl">
+                            <div className="flex flex-col-reverse items-center md:flex-row">
+                                <div className="text-center md:w-8/12 md:pr-9 md:text-right">
+                                    <h2 className="title text-3xl md:text-4xl lg:text-6xl">
                                         Lorem ipsum dolor sit amet consectetur
                                     </h2>
-                                    <div className="mt-10">
+                                    <div className=" mt-6 lg:mt-10 ">
                                         <Link href="#" className="btn btn-md ">
                                             Ver mas
                                         </Link>
                                     </div>
                                 </div>
-                                <div className="flex w-5/12 justify-center">
+                                <div className="text-center md:w-4/12">
                                     <img
                                         //className="object-cover w-full mx-auto"
-                                        className="max-h-96 "
+                                        className="mb-6 inline-block h-52 max-h-96 md:h-full lg:mb-0 "
                                         src={item.image}
                                         alt={item.image}
                                         //style={{ height: height }}

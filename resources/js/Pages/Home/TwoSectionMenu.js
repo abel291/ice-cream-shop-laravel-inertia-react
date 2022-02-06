@@ -13,7 +13,7 @@ const TwoSectionMenu = () => {
                     Ice cream
                 </TwoSectionSubTitle>
                 <TwoSectionTitle>SABOR DELICIOSO</TwoSectionTitle>
-                <div className="mb-10 grid grid-cols-2 gap-x-14 gap-y-5 text-left">
+                <div className="mb-10 grid md:grid-cols-2 gap-x-14 gap-y-5 text-left">
                     {[
                         "APPLE",
                         "BLUEBERRY",
@@ -25,7 +25,7 @@ const TwoSectionMenu = () => {
                         "PISTACHIO",
                     ].map((item) => (
                         <div key={item}>
-                            <div className="title mb-1 flex">
+                            <div className="title mb-2 flex">
                                 <h6 className="">{item}</h6>
                                 <div className="flex-grow border-b-2  border-dotted border-gray-700 "></div>
                                 <div className="">$2</div>

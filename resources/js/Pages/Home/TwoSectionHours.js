@@ -14,7 +14,7 @@ const TwoSectionHours = () => {
                     do eius- mod tempor incididunt ut labore et dolore.
                 </TwoSectionText>
 
-                <div className="space-y-3 px-8 ">
+                <div className="space-y-3 md:px-8 ">
                     <div className="title flex justify-between">
                         <h6>MONDAY</h6>
                         <div className="flex-grow border-b-2  border-dotted border-gray-500 "></div>
