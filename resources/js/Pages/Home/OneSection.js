@@ -9,7 +9,7 @@ const OneSection = () => {
                 QUE DEBEMOS DEJAR REGULARMENTE LO QUE ESTEMOS HACIENDO Y DEDICAR
                 NUESTRA ATENCIÓN A COMER.
             </p>
-            <span className="font-sacramento text-5xl text-gray-400">
+            <span className="font-script text-5xl text-gray-400">
                 Funnyano Pavarotti
             </span>
             </div>

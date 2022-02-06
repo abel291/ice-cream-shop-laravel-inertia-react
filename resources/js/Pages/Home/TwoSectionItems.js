@@ -1,4 +1,8 @@
-import TwoSection from "@/Components/TwoSection";
+import TwoSection, {
+    TwoSectionSubTitle,
+    TwoSectionText,
+    TwoSectionTitle,
+} from "@/Components/TwoSection";
 import { Link } from "@inertiajs/inertia-react";
 import React from "react";
 
@@ -6,18 +10,16 @@ const TwoSectionItems = () => {
     return (
         <TwoSection img="/img/home/img-3.jpg">
             <div className="text-center">
-                <h3 className="title mb-7 w-full  text-4xl">
-                    LOS MEJORES HELADOS
-                </h3>
-                <p className="mb-7 font-text">
+                <TwoSectionTitle>LOS MEJORES HELADOS</TwoSectionTitle>
+                <TwoSectionText>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit sed
                     do eius- mod tempor incididunt ut labore et dolore.
-                </p>
-                <p className="mb-16  font-sacramento text-6xl text-gray-400">
+                </TwoSectionText>
+                <TwoSectionSubTitle className="mb-16">
                     Básico y especiale
-                </p>
+                </TwoSectionSubTitle>
 
-                <div >
+                <div>
                     <Link href="#" className="btn btn-md">
                         Ver Mas
                     </Link>

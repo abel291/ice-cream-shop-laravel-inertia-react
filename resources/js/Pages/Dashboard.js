@@ -1,8 +1,9 @@
 import React from "react";
 import Authenticated from "@/Layouts/Authenticated";
 import { Head } from "@inertiajs/inertia-react";
-import Carousel from "@/Components/Carousel";
+
 import TwoSection from "../Components/TwoSection";
+import Carousel from "./Home/Carousel";
 
 export default function Dashboard(props) {
     const data = [

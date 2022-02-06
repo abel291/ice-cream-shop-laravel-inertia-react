@@ -2,7 +2,7 @@ import React from "react";
 
 import { Head } from "@inertiajs/inertia-react";
 import Navbar from "./Navbar/Navbar";
-import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Newsletter from "@/Components/Newsletter";
 const AppLayout = ({ children, title = "" }) => {
     return (

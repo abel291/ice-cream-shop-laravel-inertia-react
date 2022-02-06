@@ -24,4 +24,22 @@ const TwoSection = ({ img, reverse = false, children }) => {
     );
 };
 
+export const TwoSectionTitle = ({ className="", children }) => {
+    return (
+        <h3 className={"title mb-7 w-full text-4xl" + " " + className}>
+            {children}
+        </h3>
+    );
+};
+export const TwoSectionSubTitle = ({ className="", children }) => {
+    return (
+        <p className={"font-script text-5xl text-gray-400" + " " + className}>
+            {children}
+        </p>
+    );
+};
+export const TwoSectionText = ({ className="", children }) => {
+    return <p className={"mb-7 font-text" + " " + className}>{children}</p>;
+};
+
 export default TwoSection;

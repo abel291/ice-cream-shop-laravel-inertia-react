@@ -1,18 +1,18 @@
 import React from "react";
-import TwoSection from "@/Components/TwoSection";
+import TwoSection, { TwoSectionText, TwoSectionSubTitle, TwoSectionTitle } from "@/Components/TwoSection";
 import { Link } from "@inertiajs/inertia-react";
 const TwoSectionHours = () => {
     return (
         <TwoSection img="/img/home/img-2.jpg" reverse={true}>
             <div className="text-center">
-                <p className="mb-1  font-sacramento text-5xl text-gray-400">
+                <TwoSectionSubTitle className="mb-1">
                     Estamos abiertos
-                </p>
-                <h3 className="title mb-7 w-full  text-4xl">HORAS LABORALES</h3>
-                <p className="mb-7 font-text">
+                </TwoSectionSubTitle>
+                <TwoSectionTitle>HORAS LABORALES</TwoSectionTitle>
+                <TwoSectionText>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit sed
                     do eius- mod tempor incididunt ut labore et dolore.
-                </p>
+                </TwoSectionText>
 
                 <div className="space-y-3 px-8 ">
                     <div className="title flex justify-between">

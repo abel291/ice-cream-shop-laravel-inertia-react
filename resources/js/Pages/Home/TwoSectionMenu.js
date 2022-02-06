@@ -1,4 +1,7 @@
-import TwoSection from "@/Components/TwoSection";
+import TwoSection, {
+    TwoSectionSubTitle,
+    TwoSectionTitle,
+} from "@/Components/TwoSection";
 import { Link } from "@inertiajs/inertia-react";
 import React from "react";
 
@@ -6,11 +9,11 @@ const TwoSectionMenu = () => {
     return (
         <TwoSection img="/img/home/img-1.jpg">
             <div className="text-center">
-                <p className="mb-1  font-sacramento text-5xl text-gray-400">
+                <TwoSectionSubTitle className="mb-1">
                     Ice cream
-                </p>
-                <h3 className="title mb-9 w-full  text-4xl">SABOR DELICIOSO</h3>
-                <div className="mb-10 grid grid-cols-2 gap-x-14 gap-y-5">
+                </TwoSectionSubTitle>
+                <TwoSectionTitle>SABOR DELICIOSO</TwoSectionTitle>
+                <div className="mb-10 grid grid-cols-2 gap-x-14 gap-y-5 text-left">
                     {[
                         "APPLE",
                         "BLUEBERRY",
@@ -27,9 +30,7 @@ const TwoSectionMenu = () => {
                                 <div className="flex-grow border-b-2  border-dotted border-gray-700 "></div>
                                 <div className="">$2</div>
                             </div>
-                            <div className="font-text">
-                                Lorem ipsum dolor es umi
-                            </div>
+                            <div className="font-text text-sm">Lorem ipsum dolor es umi</div>
                         </div>
                     ))}
                 </div>

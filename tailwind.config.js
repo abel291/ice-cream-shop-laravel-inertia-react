@@ -12,7 +12,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ["Oswald", ...defaultTheme.fontFamily.sans],
-                sacramento: ["Sacramento",...defaultTheme.fontFamily.sans],
+                script: ["Sacramento",...defaultTheme.fontFamily.sans],
                 text: ["Open Sans",...defaultTheme.fontFamily.sans],
             },
         },
