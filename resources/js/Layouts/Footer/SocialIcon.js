@@ -3,7 +3,7 @@ import React from "react";
 
 const SocialIcon = () => {
     return (
-        <div className="flex space-x-3">
+        <div className="flex space-x-3 justify-center lg:justify-start">
             <Link>
                 <svg
                     className="h-6 w-6 fill-gray-700"

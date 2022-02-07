@@ -9,11 +9,22 @@ module.exports = {
     ],
 
     theme: {
+        container: {
+            center: true,
+            padding: {
+                DEFAULT: "2rem",
+                sm: "2rem",
+                md: "3rem",
+                lg: "4rem",
+                xl: "5rem",
+                "2xl": "6rem",
+            },
+        },
         extend: {
             fontFamily: {
                 sans: ["Oswald", ...defaultTheme.fontFamily.sans],
-                script: ["Sacramento",...defaultTheme.fontFamily.sans],
-                text: ["Open Sans",...defaultTheme.fontFamily.sans],
+                script: ["Sacramento", ...defaultTheme.fontFamily.sans],
+                text: ["Open Sans", ...defaultTheme.fontFamily.sans],
             },
         },
     },

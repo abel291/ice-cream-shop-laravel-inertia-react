@@ -18,9 +18,14 @@ const Navbar = () => {
                             <NavLink
                                 href={route("home")}
                                 active={route().current("home")}
-                            >                                Home
+                            >
+                                
+                                Home
                             </NavLink>
-                            <NavLink href={"/DDD"} active={false}>
+                            <NavLink
+                                href={route("about-us")}
+                                active={route().current("about-us")}
+                            >
                                 Acerca de
                             </NavLink>
                             <NavLink href={"/DDD"} active={false}>

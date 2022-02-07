@@ -7,19 +7,19 @@ const TwoSection = ({ img, reverse = false, children }) => {
             <div className="mx-auto">
                 <div
                     className={
-                        "flex flex-col-reverse md:flex-row " +
-                        (reverse && "flex-row-reverse")
+                        "flex flex-col-reverse  " +
+                        (reverse ? "lg:flex-row-reverse" : "lg:flex-row")
                     }
                 >
-                    <div className="w-full md:w-1/2 ">
+                    <div className="w-full lg:w-1/2 ">
                         <img
                             src={img}
                             className="h-full w-full object-cover"
                             alt=""
                         />
                     </div>
-                    <div className="w-full md:w-1/2 ">
-                        <div className="px-[10%] pb-[18%] pt-[20%] lg:px-[15%]">
+                    <div className="w-full lg:w-1/2 ">
+                        <div className="py-section  px-10 md:px-36 lg:px-16">
                             {children}
                         </div>
                     </div>
@@ -44,7 +44,13 @@ export const TwoSectionTitle = ({ className = "", children }) => {
 };
 export const TwoSectionSubTitle = ({ className = "", children }) => {
     return (
-        <p className={"font-script  text-4xl md:text-5xl text-gray-400" + " " + className}>
+        <p
+            className={
+                "font-script text-5xl text-gray-400 md:text-5xl" +
+                " " +
+                className
+            }
+        >
             {children}
         </p>
     );

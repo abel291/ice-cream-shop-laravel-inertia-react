@@ -10,14 +10,14 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
 
 const Carousel = ({ data, height = "500px" }) => {
     return (
-        <div className="relative flex h-full items-center overflow-hidden bg-orange-50">
+        <div className="relative flex h-full  items-center overflow-hidden bg-orange-50">
             <button className="swiper-button-next   ">
                 <ChevronRightIcon className="h-full w-full text-gray-800 " />
             </button>
             <button className="swiper-button-prev  ">
                 <ChevronLeftIcon className="h-full w-full text-gray-800 " />
             </button>
-            <div className="flex max-w-full items-center px-8 md:px-10 lg:mx-auto lg:w-full lg:max-w-7xl lg:px-16 lg:py-8">
+            <div className="flex w-full items-center py-16 px-10 lg:mx-auto lg:w-full lg:max-w-7xl lg:px-16">
                 <Swiper
                     modules={[Navigation, Autoplay]}
                     spaceBetween={20}

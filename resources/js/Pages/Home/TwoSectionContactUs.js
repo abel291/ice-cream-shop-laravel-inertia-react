@@ -24,7 +24,7 @@ const TwoSectionContactUs = () => {
                     do eius- mod tempor incididunt ut labore et dolore.
                 </TwoSectionText>
 
-                <div className="mb-10 px-8">
+                <div className="mb-10 lg:px-10">
                     <form action="" className="space-y-3">
                         <Input
                             required={true}

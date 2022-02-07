@@ -18,6 +18,54 @@ html {
         @apply px-9 py-[6px] text-sm;
     }
 }
+@layer utilities {
+    .py-section {
+        @apply py-28;
+    }
+    .pb-section {
+        @apply pb-28;
+    }
+    .pt-section {
+        @apply pt-28;
+    }
+    /* //md */
+    @media (min-width: 768px) {
+        .py-section {
+            @apply py-32;
+        }
+        .pb-section {
+            @apply pb-32;
+        }
+        .pt-section {
+            @apply pt-32;
+        }
+    }
+
+    /* //lg */
+    @media (min-width: 1024px) {
+        .py-section {
+            @apply py-36;
+        }
+        .pb-section {
+            @apply pb-36;
+        }
+        .pt-section {
+            @apply pt-36;
+        }
+    }
+    /* //xl */
+    @media (min-width: 1280px) {
+        .py-section {
+            @apply py-40;
+        }
+        .pb-section {
+            @apply pb-40;
+        }
+        .pt-section {
+            @apply pt-40;
+        }
+    }
+}
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
@@ -27,4 +75,10 @@ html {
 .swiper-button-prev {
     width: 70px !important;
     height: 70px !important;
+}
+.swiper-button-next{
+    right: 0px !important;
+}
+.swiper-button-prev{
+    left: 0px !important;
 }

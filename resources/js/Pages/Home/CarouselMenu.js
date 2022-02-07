@@ -54,19 +54,37 @@ const dataFake = [
 ];
 const CarouselMenu = ({ data, height = "500px" }) => {
     return (
-        <div className="relative flex h-full items-center overflow-hidden bg-gray-800">
-            <button className="swiper-button-next  ">
-                <ChevronRightIcon className="h-full w-full text-white " />
-            </button>
-            <button className="swiper-button-prev ">
-                <ChevronLeftIcon className="h-full w-full text-white " />
-            </button>
-            <div className="mx-auto flex max-w-full items-center px-8 pt-32 pb-24 md:max-w-7xl md:px-10 lg:w-full lg:px-24">
+        <div className="overflow-hidden bg-gray-800">
+            <div className="py-section relative mx-auto flex h-full items-center  px-10 md:max-w-7xl  lg:px-16">
+                <button className="swiper-button-next  ">
+                    <ChevronRightIcon className="h-full w-full text-white " />
+                </button>
+                <button className="swiper-button-prev ">
+                    <ChevronLeftIcon className="h-full w-full text-white " />
+                </button>
+
                 <Swiper
                     modules={[Navigation, Autoplay]}
                     spaceBetween={80}
-                    slidesPerView={1}
-                    centeredSlides={true}
+                    slidesPerView={3}
+                    breakpoints={{
+                        // when window width is >= 320px
+                        320: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                        },
+
+                        // when window width is >= 640px
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 40,
+                        },
+                        // when window width is >= 768px
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 40,
+                        },
+                    }}
                     //navigation
                     // autoplay={{
                     //     delay: 2500,
@@ -81,7 +99,7 @@ const CarouselMenu = ({ data, height = "500px" }) => {
                         <SwiperSlide key={key}>
                             <div className="space-y-1 text-center text-white">
                                 <img
-                                    className="inline-block h-full max-h-64"
+                                    className="inline-block h-52 max-h-64  md:h-full"
                                     src={item.image}
                                     alt={item.image}
                                 />

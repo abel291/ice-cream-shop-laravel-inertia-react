@@ -27,18 +27,18 @@ function Home(props) {
             image: "/img/home/img-6.png",
         },
     ];
-    
+
     return (
         <AppLayout title="Inicio">
             <div className="h-[calc(100vh-96px)] ">
                 <Carousel data={data} />
             </div>
-             <TwoSectionMenu />
-            <CarouselMenu data={data}/>
+            <TwoSectionMenu />
+            <CarouselMenu data={data} />
             <TwoSectionHours />
-            {/*<OneSection />
+            <OneSection />
             <TwoSectionItems />
-            <TwoSectionContactUs/> */}
+            <TwoSectionContactUs />
         </AppLayout>
     );
 }

@@ -7,14 +7,14 @@ const Footer = () => {
     return (
         <div className="border-t border-gray-300 bg-orange-50">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center py-6 ">
-                    <div className=" w-1/3 ">
+                <div className="grid items-center gap-y-5 py-6 lg:grid-cols-3 ">
+                    <div>
                         <SocialIcon />
                     </div>
-                    <div className=" w-1/3 text-center font-text text-sm">
+                    <div className=" text-center font-text text-sm">
                         © 2022 Ice Cream Shop. All Rights Reserved
                     </div>
-                    <div className=" w-1/3 ">
+                    <div>
                         <MenuLink />
                     </div>
                 </div>
