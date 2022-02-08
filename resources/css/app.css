@@ -17,6 +17,7 @@ html {
     .btn-md {
         @apply px-9 py-[6px] text-sm;
     }
+    
 }
 @layer utilities {
     .py-section {

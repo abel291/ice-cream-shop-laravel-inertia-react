@@ -11,7 +11,7 @@ const AboutUs = () => {
     return (
         <AppLayout title="Inicio">
             <Banner
-                img=""
+                img="/img/about-us/banner.jpg"
                 subTitle="Pocas Palabra"
                 title="Un poco sobre nosostros"
             />

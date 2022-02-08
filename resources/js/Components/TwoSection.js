@@ -19,7 +19,7 @@ const TwoSection = ({ img, reverse = false, children }) => {
                         />
                     </div>
                     <div className="w-full lg:w-1/2 ">
-                        <div className="py-section  px-10 md:px-36 lg:px-16">
+                        <div className="py-section px-10 md:px-36 lg:px-16">
                             {children}
                         </div>
                     </div>
