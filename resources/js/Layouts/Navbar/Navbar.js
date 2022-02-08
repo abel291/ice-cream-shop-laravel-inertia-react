@@ -19,7 +19,6 @@ const Navbar = () => {
                                 href={route("home")}
                                 active={route().current("home")}
                             >
-                                
                                 Home
                             </NavLink>
                             <NavLink
@@ -31,7 +30,10 @@ const Navbar = () => {
                             <NavLink href={"/DDD"} active={false}>
                                 Blog
                             </NavLink>
-                            <NavLink href={"/DDD"} active={false}>
+                            <NavLink
+                                href={route("products")}
+                                active={route().current("products")}
+                            >
                                 Helados
                             </NavLink>
                         </div>

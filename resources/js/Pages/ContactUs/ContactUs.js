@@ -19,7 +19,6 @@ const ContactUs = () => {
                 subTitle="Pocas Palabra"
                 title="Contacto"
             />
-
             <AddressList />
             <Map />
             <Form />

@@ -9,7 +9,7 @@ const Footer = () => {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="grid items-center gap-y-5 py-6 lg:grid-cols-3 ">
                     <div>
-                        <SocialIcon />
+                        <SocialIcon className="flex space-x-3 justify-center lg:justify-start" />
                     </div>
                     <div className=" text-center font-text text-sm">
                         © 2022 Ice Cream Shop. All Rights Reserved

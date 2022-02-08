@@ -1,9 +1,9 @@
 import { Link } from "@inertiajs/inertia-react";
 import React from "react";
 
-const SocialIcon = () => {
+const SocialIcon = ({className}) => {
     return (
-        <div className="flex space-x-3 justify-center lg:justify-start">
+        <div className={className}>
             <Link>
                 <svg
                     className="h-6 w-6 fill-gray-700"
