@@ -40,6 +40,22 @@ Route::get('/product/{slug}', function () {
     return Inertia::render('Product/Product');
 })->name('product');
 
+
+
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::get('/shopping-cart', function () {
+        return Inertia::render('ShoppingCart/ShoppingCart');
+    })->name('shopping-cart');
+
+    Route::get('/checkout', function () {
+        return Inertia::render('Checkout/Checkout');
+    })->name('checkout');
+
+    Route::get('/my-account', function () {
+        return Inertia::render('Auth/MyAccount/MyAccount');
+    })->name('my-account');
+});
+
 Route::get('/dashboard', function () {
     return Inertia::render('Home/Home');
 })->middleware(['auth', 'verified'])->name('dashboard');

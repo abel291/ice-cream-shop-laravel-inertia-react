@@ -4,38 +4,48 @@ import NavLink from "@/Components/NavLink";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink";
 import { Link, usePage } from "@inertiajs/inertia-react";
 import ProfileDropdown from "./ProfileDropdown";
+import { ShoppingBagIcon } from "@heroicons/react/solid";
+import { Heading6 } from "@/Components/Elements";
 
 const Navbar = () => {
     const { auth } = usePage().props;
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
+    const linksNavbar = [
+        {
+            route: "home",
+            title: "Inicio",
+        },
+        {
+            route: "about-us",
+            title: "Acerca de",
+        },
+        {
+            route: "about-us",
+            title: "Blog",
+        },
+        {
+            route: "products",
+            title: "Helados",
+        },
+    ];
+
     return (
         <nav className="border-b border-gray-100 bg-white ">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-24 items-center justify-between">
                     <div className="flex">
-                        <div className="hidden space-x-5 sm:flex ">
-                            <NavLink
-                                href={route("home")}
-                                active={route().current("home")}
-                            >
-                                Home
-                            </NavLink>
-                            <NavLink
-                                href={route("about-us")}
-                                active={route().current("about-us")}
-                            >
-                                Acerca de
-                            </NavLink>
-                            <NavLink href={"/DDD"} active={false}>
-                                Blog
-                            </NavLink>
-                            <NavLink
-                                href={route("products")}
-                                active={route().current("products")}
-                            >
-                                Helados
-                            </NavLink>
+                        <div className="hidden sm:flex sm:gap-6 ">
+                            {linksNavbar.map((item, key) => (
+                                <NavLink
+                                    key={key}
+                                    href={route(item.route)}
+                                    active={route().current(item.route)}
+                                >
+                                    <Heading6>{item.title}</Heading6>
+                                </NavLink>
+                            ))}
+                            
                         </div>
                     </div>
                     <div>
@@ -44,9 +54,14 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    <div className="hidden sm:flex sm:items-center">
-                        {auth.user && <ProfileDropdown auth={auth} />}
-                        <button className="btn btn-md ml-6">Orden</button>
+                    <div className="hidden gap-6 sm:flex sm:items-center">
+                        {auth.user ? (
+                            <ProfileDropdown auth={auth} />
+                        ) : (
+                            <Link href={route("login")} className="btn btn-md ">
+                                Login
+                            </Link>
+                        )}
                     </div>
 
                     <div className="-mr-2 flex items-center sm:hidden">
@@ -99,21 +114,25 @@ const Navbar = () => {
                 }
             >
                 <div className="space-y-1 pt-2 pb-3">
-                    <ResponsiveNavLink
-                        href={route("dashboard")}
-                        active={route().current("dashboard")}
-                    >
-                        Dashboard
-                    </ResponsiveNavLink>
+                    {linksNavbar.map((item, key) => (
+                        <ResponsiveNavLink
+                            key={key}
+                            href={route(item.route)}
+                            active={route().current(item.route)}
+                        >
+                            <Heading6>{item.title}</Heading6>
+                        </ResponsiveNavLink>
+                    ))}
                 </div>
                 {auth.user && (
                     <div className="border-t border-gray-200 pt-4 pb-1">
                         <div className="px-4">
-                            <div className="text-base font-medium ">
-                                {auth.user.name}
-                            </div>
-                            <div className="text-sm font-medium text-gray-500">
-                                {auth.user.email}
+                            <Heading6>{auth.user.name}</Heading6>
+
+                            <div>
+                                <span className="font-text text-sm text-gray-500">
+                                    {auth.user.email}
+                                </span>
                             </div>
                         </div>
 
@@ -123,7 +142,7 @@ const Navbar = () => {
                                 href={route("logout")}
                                 as="button"
                             >
-                                Log Out
+                                <Heading6>Salir</Heading6>
                             </ResponsiveNavLink>
                         </div>
                     </div>

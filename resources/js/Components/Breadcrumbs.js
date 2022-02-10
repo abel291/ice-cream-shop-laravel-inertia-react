@@ -3,8 +3,8 @@ import React from "react";
 const Breadcrumbs = ({ data = [] }) => {
     return (
         <div className="bg-orange-50">
-            <div className="container  py-12 ">
-                <div className="flex   font-text text-lg font-medium">
+            <div className="container py-12 ">
+                <div className="flex font-text">
                     <Link className="hover:underline" href="/">
                         Inicio
                     </Link>

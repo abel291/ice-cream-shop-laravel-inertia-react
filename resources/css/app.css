@@ -5,7 +5,7 @@
 @import "tailwindcss/utilities";
 
 html {
-    @apply text-gray-700;
+    @apply text-gray-800;
 }
 @layer components {
     .title {

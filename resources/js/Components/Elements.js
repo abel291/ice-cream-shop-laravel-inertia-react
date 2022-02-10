@@ -21,6 +21,13 @@ export const Heading1 = ({ className, children }) => {
         </h1>
     );
 };
+export const Heading2 = ({ className, children }) => {
+    return (
+        <h1 className={"title text-4xl leading-normal" + " " + className}>
+            {children}
+        </h1>
+    );
+};
 export const Heading3 = ({ className, children }) => {
     return (
         <h1 className={"title text-3xl leading-normal" + " " + className}>
@@ -29,11 +36,12 @@ export const Heading3 = ({ className, children }) => {
     );
 };
 
+
 export const Heading5 = ({ className, children }) => {
     return (
         <span
             className={
-                "title inline-block text-xl leading-normal" + " " + className
+                "title inline-block md:text-xl leading-normal" + " " + className
             }
         >
             {children}
@@ -41,6 +49,13 @@ export const Heading5 = ({ className, children }) => {
     );
 };
 
+export const Heading6 = ({ className, children }) => {
+    return (
+        <span className={"title inline-block leading-normal" + " " + className}>
+            {children}
+        </span>
+    );
+};
 export const BodyText = ({ className, children }) => {
     return <p className={"font-text" + " " + className}>{children}</p>;
 };

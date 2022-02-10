@@ -1,94 +1,116 @@
-import React, { useEffect } from 'react';
-import Button from '@/Components/Button';
-import Checkbox from '@/Components/Checkbox';
-import Guest from '@/Layouts/Guest';
-import Input from '@/Components/Input';
-import Label from '@/Components/Label';
-import ValidationErrors from '@/Components/ValidationErrors';
-import { Head, Link, useForm } from '@inertiajs/inertia-react';
+import React, { useEffect } from "react";
+import Button from "@/Components/Button";
+import Checkbox from "@/Components/Checkbox";
+import Guest from "@/Layouts/Guest";
+import Input from "@/Components/Input";
+import Label from "@/Components/Label";
+import ValidationErrors from "@/Components/ValidationErrors";
+import { Head, Link, useForm } from "@inertiajs/inertia-react";
+import AppLayout from "@/Layouts/AppLayout";
+import { Heading2, Heading3 } from "@/Components/Elements";
 
 export default function Login({ status, canResetPassword }) {
     const { data, setData, post, processing, errors, reset } = useForm({
-        email: '',
-        password: '',
-        remember: '',
+        email: "",
+        password: "",
+        remember: "",
     });
 
     useEffect(() => {
         return () => {
-            reset('password');
+            reset("password");
         };
     }, []);
 
     const onHandleChange = (event) => {
-        setData(event.target.name, event.target.type === 'checkbox' ? event.target.checked : event.target.value);
+        setData(
+            event.target.name,
+            event.target.type === "checkbox"
+                ? event.target.checked
+                : event.target.value
+        );
     };
 
     const submit = (e) => {
         e.preventDefault();
 
-        post(route('login'));
+        post(route("login"));
     };
 
     return (
-        <Guest>
-            <Head title="Log in" />
+        <AppLayout title="Iniciar sesión">
+            <div className="py-section container">
+                {status && (
+                    <div className="mb-4 text-sm font-medium text-green-600">
+                        {status}
+                    </div>
+                )}
 
-            {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
-
-            <ValidationErrors errors={errors} />
-
-            <form onSubmit={submit}>
+                <ValidationErrors errors={errors} />
                 <div>
-                    <Label forInput="email" value="Email" />
-
-                    <Input
-                        type="text"
-                        name="email"
-                        value={data.email}
-                        className="mt-1 block w-full"
-                        autoComplete="username"
-                        isFocused={true}
-                        handleChange={onHandleChange}
-                    />
+                    <Heading2 className="mb-6">Login</Heading2>
                 </div>
+                <form onSubmit={submit} className="space-y-5 lg:w-1/2">
+                    <div>
+                        <Label forInput="email" value="Correo electrónico *" />
 
-                <div className="mt-4">
-                    <Label forInput="password" value="Password" />
+                        <Input
+                            type="text"
+                            name="email"
+                            value={data.email}
+                            className="mt-1 block w-full"
+                            autoComplete="username"
+                            isFocused={true}
+                            handleChange={onHandleChange}
+                        />
+                    </div>
 
-                    <Input
-                        type="password"
-                        name="password"
-                        value={data.password}
-                        className="mt-1 block w-full"
-                        autoComplete="current-password"
-                        handleChange={onHandleChange}
-                    />
-                </div>
+                    <div className="mt-4">
+                        <Label forInput="password" value="Contraseña" />
 
-                <div className="block mt-4">
-                    <label className="flex items-center">
-                        <Checkbox name="remember" value={data.remember} handleChange={onHandleChange} />
+                        <Input
+                            type="password"
+                            name="password"
+                            value={data.password}
+                            className="mt-1 block w-full"
+                            autoComplete="current-password"
+                            handleChange={onHandleChange}
+                        />
+                    </div>
 
-                        <span className="ml-2 text-sm text-gray-600">Remember me</span>
-                    </label>
-                </div>
+                    <div className="mb-4 flex items-center gap-6">
+                        <div>
+                            <Button
+                                className="btn btn-md "
+                                processing={processing}
+                            >
+                                Log in
+                            </Button>
+                        </div>
+                        <div>
+                            <label className="flex items-center font-text">
+                                <Checkbox
+                                    name="remember"
+                                    value={data.remember}
+                                    handleChange={onHandleChange}
+                                />
 
-                <div className="flex items-center justify-end mt-4">
+                                <span className="ml-2 text-sm text-gray-600">
+                                    Recuérdame
+                                </span>
+                            </label>
+                        </div>
+                    </div>
                     {canResetPassword && (
                         <Link
-                            href={route('password.request')}
-                            className="underline text-sm text-gray-600 hover:text-gray-900"
+                            href={route("password.request")}
+                            className="block font-text text-sm text-gray-600 underline hover:text-gray-900"
                         >
-                            Forgot your password?
+                            ¿Ha olvidado su contraseña?
                         </Link>
                     )}
-
-                    <Button className="ml-4" processing={processing}>
-                        Log in
-                    </Button>
-                </div>
-            </form>
-        </Guest>
+                </form>
+            </div>
+        </AppLayout>
     );
 }
