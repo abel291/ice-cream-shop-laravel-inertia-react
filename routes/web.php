@@ -36,6 +36,10 @@ Route::get('/products', function () {
     return Inertia::render('Products/Products');
 })->name('products');
 
+Route::get('/product/{slug}', function () {
+    return Inertia::render('Product/Product');
+})->name('product');
+
 Route::get('/dashboard', function () {
     return Inertia::render('Home/Home');
 })->middleware(['auth', 'verified'])->name('dashboard');

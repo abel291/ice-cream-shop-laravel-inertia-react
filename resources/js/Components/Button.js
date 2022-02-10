@@ -3,13 +3,13 @@ import React from "react";
 export default function Button({
     type = "submit",
     className = "",
-    processing,
+    processing = false,
     children,
 }) {
     return (
         <button
             type={type}
-            className={`${processing && "opacity-25"} ` + className}
+            className={(processing ? "opacity-25 " : "") + className}
             disabled={processing}
         >
             {children}

@@ -15,7 +15,7 @@ html {
         @apply title inline-block border border-gray-800 bg-white  outline-offset-0 ring-gray-600 hover:border-gray-600 hover:ring-2;
     }
     .btn-md {
-        @apply px-9 py-[6px] text-sm;
+        @apply px-9 py-2 text-sm;
     }
     
 }

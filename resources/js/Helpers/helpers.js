@@ -4,5 +4,5 @@ export const formatCurrency = (n) => {
         maximumFractionDigits: 2,
     })
     n = n ? n : 0 // number NaN = 0
-    return "$ " + currencyFormat.format(parseFloat(n))
+    return "$" + currencyFormat.format(parseFloat(n))
 }
