@@ -9,18 +9,18 @@ const MyAccount = () => {
             <div className="font-text">
                 Desde el panel de control de su cuenta, puede ver sus ,
                 administrar los
-                <Link href="/" className="px-1 font-bold underline ">
+                <Link href={route("orders")} className="px-1 font-bold underline ">
                     pedidos recientes
                 </Link>
                 , administrar los
                 <Link
-                    href={route("home")}
+                    href={route("account-details")}
                     className="px-1 font-bold underline "
                 >
                     detalles de su cuenta
                 </Link>
                 y
-                <Link href="/" className="px-1 font-bold underline ">
+                <Link href={route("change-password")} className="px-1 font-bold underline ">
                     cambiar su contraseña.
                 </Link>
                 .

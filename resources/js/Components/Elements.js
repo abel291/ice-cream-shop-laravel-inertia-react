@@ -14,30 +14,40 @@ import React from "react";
 // export const Text = ({ children }) => {
 //     return <p className="font-text">{children}</p>;
 // };
-export const Heading1 = ({ className, children }) => {
+export const Heading1 = ({ className="", children }) => {
     return (
         <h1 className={"title text-5xl leading-normal" + " " + className}>
             {children}
         </h1>
     );
 };
-export const Heading2 = ({ className, children }) => {
+export const Heading2 = ({ className="", children }) => {
     return (
         <h1 className={"title text-4xl leading-normal" + " " + className}>
             {children}
         </h1>
     );
 };
-export const Heading3 = ({ className, children }) => {
+export const Heading3 = ({ className="", children }) => {
     return (
         <h1 className={"title text-3xl leading-normal" + " " + className}>
             {children}
         </h1>
     );
 };
+export const Heading4 = ({ className="", children }) => {
+    return (
+        <span
+            className={
+                "title inline-block md:text-2xl leading-normal" + " " + className
+            }
+        >
+            {children}
+        </span>
+    );
+};
 
-
-export const Heading5 = ({ className, children }) => {
+export const Heading5 = ({ className="", children }) => {
     return (
         <span
             className={
@@ -49,13 +59,13 @@ export const Heading5 = ({ className, children }) => {
     );
 };
 
-export const Heading6 = ({ className, children }) => {
+export const Heading6 = ({ className="", children }) => {
     return (
         <span className={"title inline-block leading-normal" + " " + className}>
             {children}
         </span>
     );
 };
-export const BodyText = ({ className, children }) => {
+export const BodyText = ({ className="", children }) => {
     return <p className={"font-text" + " " + className}>{children}</p>;
 };
