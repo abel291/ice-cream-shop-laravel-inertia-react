@@ -16,20 +16,19 @@ class ProductResource extends JsonResource
     public function toArray($request)
     {
         return [
-
             'id' => $this->id,
             'name' => $this->name,
             'dimension' => $this->dimension,
-            'calories' => $this->calories,
-            
+            'weight' => $this->weight,
             'slug' => $this->slug,
             'description_min' => $this->description_min,
             'description_max' => $this->description_max,
-            'img' => $this->img,            
-            'stars' => $this->stars,            
-            'price' => $this->price,            
-            'images' => $this->whenLoaded('images'),           
-            'category' => CategoryResource::make($this->whenLoaded('category')),            
+            'img' => $this->img,
+            'img_ball' => $this->img_ball,
+            'stars' => $this->stars,
+            'price' => $this->price,
+            'images' => $this->whenLoaded('images'),
+            'category' => CategoryResource::make($this->whenLoaded('category')),
             'quantity' => $this->whenPivotLoaded('shopping_cart', function () {
                 return $this->pivot->quantity;
             }),

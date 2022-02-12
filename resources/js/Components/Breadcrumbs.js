@@ -4,7 +4,7 @@ const Breadcrumbs = ({ data = [] }) => {
     return (
         <div className="bg-orange-50">
             <div className="container py-12 ">
-                <div className="flex font-text">
+                <div className="flex font-text font-medium">
                     <Link className="hover:underline" href="/">
                         Inicio
                     </Link>

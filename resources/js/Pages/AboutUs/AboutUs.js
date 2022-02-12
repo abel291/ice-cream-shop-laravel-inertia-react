@@ -7,7 +7,7 @@ import FlavorsList from "./FlavorsList";
 import FlavorsList2 from "./FlavorsList2";
 import ThreeImages from "./ThreeImages";
 
-const AboutUs = () => {
+const AboutUs = (props) => {
     return (
         <AppLayout title="Inicio">
             <Banner
@@ -15,10 +15,11 @@ const AboutUs = () => {
                 subTitle="Pocas Palabra"
                 title="Un poco sobre nosostros"
             />
-            <FlavorsList />
-            <ThreeImages />
+            <FlavorsList products={props.productsVegan} />
             <OneSection />
-            <FlavorsList2 />
+            <ThreeImages />
+
+            {/* <FlavorsList2 /> */}
         </AppLayout>
     );
 };

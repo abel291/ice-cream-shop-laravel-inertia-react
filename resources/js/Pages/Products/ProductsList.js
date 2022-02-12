@@ -3,10 +3,10 @@ import { formatCurrency } from "@/Helpers/helpers";
 import { Link } from "@inertiajs/inertia-react";
 import React from "react";
 
-const ProductsList = ({ data }) => {
+const ProductsList = ({ products }) => {
     return (
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {data.map((item, key) => (
+            {products.data.map((item, key) => (
                 <ProductCard key={key} product={item} />
             ))}
         </div>

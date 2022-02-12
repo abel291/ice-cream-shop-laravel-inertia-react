@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import { Link } from "@inertiajs/inertia-react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
 import { formatCurrency } from "@/Helpers/helpers";
+import { Heading5, Heading6 } from "@/Components/Elements";
 const dataFake = [
     {
         path: "#",
@@ -52,7 +53,7 @@ const dataFake = [
         image: "/img/home/img-bola-3.png",
     },
 ];
-const CarouselMenu = ({ data, height = "500px" }) => {
+const CarouselMenu = ({ products, height = "500px" }) => {
     return (
         <div className="overflow-hidden bg-gray-800">
             <div className="py-section relative mx-auto flex h-full items-center  px-10 md:max-w-7xl  lg:px-16">
@@ -95,20 +96,21 @@ const CarouselMenu = ({ data, height = "500px" }) => {
                         prevEl: ".swiper-button-prev",
                     }}
                 >
-                    {dataFake.map((item, key) => (
+                    {products.data.map((item, key) => (
                         <SwiperSlide key={key}>
                             <div className="space-y-1 text-center text-white">
                                 <img
                                     className="inline-block h-52 max-h-64  md:h-full"
-                                    src={item.image}
-                                    alt={item.image}
+                                    src={item.img_ball}
+                                    alt={item.img_ball}
                                 />
 
-                                <h2 className="title text-xl">{item.name}</h2>
-                                <p className="font-text">{item.text} </p>
-                                <div className="title">
-                                    {formatCurrency(item.price)}
-                                </div>
+                                <Heading5>{item.name}</Heading5>
+                                <p className="font-text text-sm">
+                                    {item.description_min}
+                                </p>
+                                <Heading6>{formatCurrency(item.price)}</Heading6>
+                                
                             </div>
                         </SwiperSlide>
                     ))}

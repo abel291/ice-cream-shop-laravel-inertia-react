@@ -10,6 +10,7 @@ import TwoSectionItems from "./TwoSectionItems";
 import TwoSectionContactUs from "./TwoSectionContactUs";
 
 function Home(props) {
+    console.log(props)
     const data = [
         {
             path: "#",
@@ -34,7 +35,7 @@ function Home(props) {
                 <Carousel data={data} />
             </div>
             <TwoSectionMenu />
-            <CarouselMenu data={data} />
+            <CarouselMenu products={props.carouselProducts} />
             <TwoSectionHours />
             <OneSection />
             <TwoSectionItems />

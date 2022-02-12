@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -16,42 +17,35 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Home/Home', [
-        //'canLogin' => Route::has('login'),
-        //'canRegister' => Route::has('register'),
-        //'laravelVersion' => Application::VERSION,
-        //'phpVersion' => PHP_VERSION,
-    ]);
-})->name('home');
+// Route::get('/', function () {
+//     return Inertia::render('Home/Home', [
+//         //'canLogin' => Route::has('login'),
+//         //'canRegister' => Route::has('register'),
+//         //'laravelVersion' => Application::VERSION,
+//         //'phpVersion' => PHP_VERSION,
+//     ]);
+// })->name('home');
 
-Route::get('/about-us', function () {
-    return Inertia::render('AboutUs/AboutUs');
-})->name('about-us');
+Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/about-us', [PageController::class, 'about_us'])->name('about-us');
+Route::get('/contact-us', [PageController::class, 'contact_us'])->name('contact-us');
 
-Route::get('/contact-us', function () {
-    return Inertia::render('ContactUs/ContactUs');
-})->name('contact-us');
+Route::get('/products/{filter_type?}/{filter?}', [PageController::class, 'products'])
+    ->where(['filter_type'=> 'category|tag'])
+    ->name('products');
 
-Route::get('/products', function () {
-    return Inertia::render('Products/Products');
-})->name('products');
-
-Route::get('/product/{slug}', function () {
-    return Inertia::render('Product/Product');
-})->name('product');
-
+Route::get('/product/{slug}', [PageController::class, 'product'])->name('product');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
-    Route::get('/my-account', [ProfileController::class,'my_account'])->name('my-account');
-    Route::get('/orders', [ProfileController::class,'orders'])->name('orders');
-    Route::get('/account-details', [ProfileController::class,'account_details'])->name('account-details');
-    Route::post('/account-details', [ProfileController::class,'store_account_details'])->name('store_account_details');
+    Route::get('/my-account', [ProfileController::class, 'my_account'])->name('my-account');
+    Route::get('/orders', [ProfileContropller::class, 'orders'])->name('orders');
+    Route::get('/account-details', [ProfileController::class, 'account_details'])->name('account-details');
+    Route::post('/account-details', [ProfileController::class, 'store_account_details'])->name('store_account_details');
     Route::get('/order-details/{order}', [ProfileController::class, 'order_details'])->name('order-details');
     Route::get('/change-password', [ProfileController::class, 'change_password'])->name('change-password');
     Route::post('/change-password', [ProfileController::class, 'store_change_password'])->name('store_change_password');
-    
+
     Route::get('/shopping-cart', function () {
         return Inertia::render('ShoppingCart/ShoppingCart');
     })->name('shopping-cart');

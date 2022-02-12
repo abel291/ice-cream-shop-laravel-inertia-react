@@ -1,15 +1,16 @@
 import React from "react";
 import Categories from "./Categories";
 import Tags from "./Tags";
-import Newflavors from "./Newflavors";
-import FollowUs from "./FollowUs";
 
-const Sidebar = ({ categories, tags, flavors }) => {
+import FollowUs from "./FollowUs";
+import NewProducts from "./NewProducts";
+
+const Sidebar = ({ categories, tags, newProducts }) => {
     return (
         <div className="space-y-10">
-            <Newflavors data={flavors} />
-            <Categories data={categories} />
-            <Tags data={tags} />
+            <NewProducts products={newProducts} />
+            <Categories categories={categories} />
+            <Tags tags={tags} />
             <FollowUs />
         </div>
     );

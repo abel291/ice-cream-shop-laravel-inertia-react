@@ -22,6 +22,7 @@ class CreateProductsTable extends Migration
             $table->text("description_min");
             $table->text("description_max");
             $table->string("img");
+            $table->string("img_ball");
             $table->tinyInteger("stars");
             $table->float('price')->default(0);
             $table->boolean("active")->default(1);

@@ -14,7 +14,7 @@ class CategoryFactory extends Factory
      */
     public function definition()
     {
-        $name = $this->faker->sentence(2);
+        $name = $this->faker->word();
         return [
             "name" => $name,
             "slug" => Str::slug($name), //

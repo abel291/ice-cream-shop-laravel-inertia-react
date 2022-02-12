@@ -16,7 +16,11 @@ class TagSeeder extends Seeder
     public function run()
     {
         Tag::truncate();
-        Tag::factory(10)->create();
+        Tag::factory(9)->create();
+        Tag::factory()->create([
+            'slug' => 'vegano',
+            'name' => 'Vegano'
+        ]);
         $tags = Tag::get();
         foreach (Product::get() as $key => $product) {
 

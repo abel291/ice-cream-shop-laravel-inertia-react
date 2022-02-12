@@ -5,11 +5,11 @@ const Pagination = ({ data }) => {
         <nav
             role="navigation"
             aria-label="Pagination Navigation"
-            className="flex justify-between"
+            className="flex justify-between border-t border-gray-200 pt-5"
         >
-            <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+            <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
                 <div>
-                    <p className=" text-gray-700 leading-5 font-text ">
+                    <p className=" font-text leading-5 text-gray-700 ">
                         Mostrando{" "}
                         <span className="font-medium">{data.meta.from}</span> a{" "}
                         <span className="font-medium">{data.meta.to}</span> de{" "}
@@ -27,28 +27,28 @@ const Pagination = ({ data }) => {
                         className="flex justify-between space-x-2 "
                     >
                         {data.links.prev === null ? (
-                            <span className="px-4 py-2 font-medium text-sm bg-gray-100 border border-gray-100 text-gray-300 cursor-default rounded-md">
+                            <span className="px-4 font-text font-medium text-gray-300">
                                 Anterior
                             </span>
                         ) : (
                             <Link
                                 preserveScroll
                                 href={data.links.prev}
-                                className="px-4 py-2 border border-gray-300 font-medium text-sm rounded-md  bg-white hover:bg-gray-50"
+                                className="px-4 font-text font-medium"
                             >
                                 Anterior
                             </Link>
                         )}
 
                         {data.links.next === null ? (
-                            <span className="px-4 py-2 font-medium text-sm bg-gray-100 border border-gray-100 text-gray-300 cursor-default rounded-md">
+                            <span className="px-4 font-text font-medium text-gray-300">
                                 Siguente
                             </span>
                         ) : (
                             <Link
                                 preserveScroll
                                 href={data.links.next}
-                                className="px-4 py-2 border border-gray-300 font-medium text-sm rounded-md  bg-white hover:bg-gray-50"
+                                className="px-4 font-text font-medium"
                             >
                                 Siguiente
                             </Link>
