@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->string("slug");
             $table->text("description_min");
             $table->text("description_max");
+            $table->string("sentence")->nullable();
             $table->string("img");
             $table->string("img_ball");
             $table->tinyInteger("stars");

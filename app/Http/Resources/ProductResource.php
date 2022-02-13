@@ -18,16 +18,17 @@ class ProductResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'dimension' => $this->dimension,
+            'dimensions' => $this->dimensions,
             'weight' => $this->weight,
             'slug' => $this->slug,
             'description_min' => $this->description_min,
             'description_max' => $this->description_max,
+            'sentence' => $this->sentence,
             'img' => $this->img,
             'img_ball' => $this->img_ball,
             'stars' => $this->stars,
             'price' => $this->price,
-            'images' => $this->whenLoaded('images'),
+            'images' => ImageResource::collection($this->whenLoaded('images')),
             'category' => CategoryResource::make($this->whenLoaded('category')),
             'quantity' => $this->whenPivotLoaded('shopping_cart', function () {
                 return $this->pivot->quantity;

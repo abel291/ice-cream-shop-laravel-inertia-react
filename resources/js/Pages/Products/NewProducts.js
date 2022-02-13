@@ -8,7 +8,7 @@ const NewProducts = ({ products }) => {
     return (
         <div>
             <SidebarTitle>Nuevos</SidebarTitle>
-            {products.data.map((item, key) => (
+            {products.map((item, key) => (
                 <div key={key} className="mb-5 flex">
                     <img
                         src={item.img}

@@ -7,7 +7,7 @@ const Categories = ({ categories }) => {
         <div>
             <SidebarTitle>Categorias</SidebarTitle>
             <div className="space-y-1">
-                {categories.data.map((item, key) => (
+                {categories.map((item, key) => (
                     <Link
                         href={route("products", {
                             filter_type: "category",

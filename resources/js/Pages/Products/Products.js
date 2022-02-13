@@ -6,6 +6,7 @@ import React from "react";
 import ProductsList from "./ProductsList";
 import Sidebar from "./Sidebar";
 const Products = (props) => {
+    
     return (
         <AppLayout title="Helados">
             <Breadcrumbs

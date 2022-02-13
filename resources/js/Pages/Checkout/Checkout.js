@@ -25,15 +25,15 @@ const Checkout = () => {
         <AppLayout title="Checkout">
             <Breadcrumbs
                 data={[
-                    { path: route("shopping-cart"), name: "Carrito" },
+                    { path: route("/shopping-cart.index"), name: "Carrito" },
                     { name: "Checkout" },
                 ]}
             />
             <div className="py-section container">
-                <div >
+                <div>
                     <Form data={data} setData={setData} />
                     <YourOrder />
-                    <p className="font-text mb-10">
+                    <p className="mb-10 font-text">
                         Sus datos personales se utilizarán para procesar su
                         pedido, respaldar su experiencia en este sitio web y
                         para otros fines descritos en nuestra política de

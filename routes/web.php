@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ShoppingCartController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -31,7 +32,7 @@ Route::get('/about-us', [PageController::class, 'about_us'])->name('about-us');
 Route::get('/contact-us', [PageController::class, 'contact_us'])->name('contact-us');
 
 Route::get('/products/{filter_type?}/{filter?}', [PageController::class, 'products'])
-    ->where(['filter_type'=> 'category|tag'])
+    ->where(['filter_type' => 'category|tag'])
     ->name('products');
 
 Route::get('/product/{slug}', [PageController::class, 'product'])->name('product');
@@ -46,9 +47,15 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/change-password', [ProfileController::class, 'change_password'])->name('change-password');
     Route::post('/change-password', [ProfileController::class, 'store_change_password'])->name('store_change_password');
 
-    Route::get('/shopping-cart', function () {
-        return Inertia::render('ShoppingCart/ShoppingCart');
-    })->name('shopping-cart');
+    Route::resource('shopping-cart', ShoppingCartController::class)->only([
+        'index', 'store', 'destroy'
+    ]);
+    
+    Route::get('/shopping-cart/apply-cupon-discount', [ShoppingCartController::class, 'apply_cupon_discount'])
+        ->name('apply_cupon_discount');
+
+    Route::get('/shopping-cart/remove-cupon-discount', [ShoppingCartController::class, 'remove_cupon_discount'])
+        ->name('remove_cupon_discount');
 
     Route::get('/checkout', function () {
         return Inertia::render('Checkout/Checkout');

@@ -33,7 +33,7 @@ const Orders = (props) => {
                     </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
-                    {props.orders.data.map((order, index) => (
+                    {props.orders.map((order, index) => (
                         <tr key={index}>
                             <td className="py-4 px-2 font-text underline">
                                 <Link

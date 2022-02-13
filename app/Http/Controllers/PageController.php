@@ -73,4 +73,15 @@ class PageController extends Controller
             'tags' => TagResource::collection($tags),
         ]);
     }
+    public function product($slug)
+    {
+        $product = Product::where('active', 1)->where('slug', $slug)->with('images','category')->firstOrFail();
+
+        $related_products = Product::where('active', 1)->where('category_id', $product->category_id)->where('id', '!=', $product->id)->get();
+        //dd(new ProductResource($product));
+        return Inertia::render('Product/Product', [
+            "product" => new ProductResource($product),
+            "relatedProducts" => ProductResource::collection($related_products)
+        ]);
+    }
 }

@@ -8,7 +8,7 @@ const Tags = ({ tags }) => {
         <div>
             <SidebarTitle>Tags</SidebarTitle>
             <div className="flex flex-wrap gap-2 text-sm">
-                {tags.data.map((item, key) => (
+                {tags.map((item, key) => (
                     <Link
                         href={route("products", {
                             filter_type: "tag",

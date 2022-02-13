@@ -35,7 +35,7 @@ const ProfileDropdown = ({ auth }) => {
                     </Dropdown.Content>
                 </Dropdown>
             </div>
-            <NavLink href={route("shopping-cart")} active={false}>
+            <NavLink href={route("shopping-cart.index")} active={false}>
                 <div className="flex items-center ">
                     <ShoppingBagIcon className="h-5 w-5 " />
                 </div>

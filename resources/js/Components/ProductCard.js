@@ -38,7 +38,7 @@ const ProductCard = ({ product }) => {
                         </Heading4>
 
                         <p className="mb-3 font-text text-sm">
-                            {product.description_min}
+                            {product.sentence}
                         </p>
                         <Heading5>{formatCurrency(product.price)}</Heading5>
                     </div>

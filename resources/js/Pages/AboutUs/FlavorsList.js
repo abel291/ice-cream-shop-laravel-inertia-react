@@ -20,7 +20,7 @@ const FlavorsList = ({ products }) => {
             </div>
             <div className="">
                 <div className=" grid gap-x-8 gap-y-6 md:grid-cols-2 lg:grid-cols-3">
-                    {products.data.map((item, key) => (
+                    {products.map((item, key) => (
                         <div key={key}>
                             <div className="title mb-2 flex">
                                 <h6 className="">{item.name}</h6>

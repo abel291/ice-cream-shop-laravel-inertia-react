@@ -5,29 +5,37 @@ import Description from "./Description";
 import Feature from "./Feature";
 import Images from "./Images";
 import RelatedProducts from "./RelatedProducts";
-const Product = ({ product = {} }) => {
+const Product = (props) => {
+    console.log(props);
     return (
-        <AppLayout title="Helado">
+        <AppLayout title={props.product.name}>
             <Breadcrumbs
                 data={[
                     { path: route("products"), name: "Helados" },
-                    { path: route("products"), name: "Chocolate" },
-                    { name: "Helado" },
+                    {
+                        path: route("products"),
+                        name: props.product.category.name,
+                    },
+                    { name: props.product.name },
                 ]}
             />
             <div className="py-section container space-y-28">
-                <div className="flex flex-col lg:flex-row lg:gap-x-10 gap-y-14 lg:gap-y-0">
+                <div className="flex flex-col gap-y-14 lg:flex-row lg:gap-x-10 lg:gap-y-0">
                     <div className="w-full lg:w-1/2">
-                        <Images images={[1, 2, 3, 4, 5]} />
+                        <Images product={props.product} />
                     </div>
                     <div className="w-full lg:w-1/2">
-                        <Feature product={product} />
+                        <Feature product={props.product} />
                     </div>
                 </div>
 
-                <Description product={product} />
+                <Description
+                    description={props.product.description_max}
+                    weight={props.product.weight}
+                    dimensions={props.product.dimensions}
+                />
 
-                <RelatedProducts relatedProducts={[1,2,3,4]} />
+                <RelatedProducts products={props.relatedProducts} />
             </div>
         </AppLayout>
     );
