@@ -30,7 +30,7 @@ const FlavorsList = ({ products }) => {
                                 </div>
                             </div>
                             <div className="font-text ">
-                                {item.description_min}
+                                {item.sentence}
                             </div>
                         </div>
                     ))}

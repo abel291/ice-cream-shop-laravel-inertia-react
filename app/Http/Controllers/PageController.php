@@ -41,6 +41,10 @@ class PageController extends Controller
             'productsVegan' => ProductResource::collection($products_vegan)
         ]);
     }
+    public function contact_us()
+    {
+        return Inertia::render('ContactUs/ContactUs');
+    }
     public function products($filter_type = null, $filter = null)
     {
         $categories = Category::withCount(['products' => function ($query) use ($filter) {
@@ -75,7 +79,7 @@ class PageController extends Controller
     }
     public function product($slug)
     {
-        $product = Product::where('active', 1)->where('slug', $slug)->with('images','category')->firstOrFail();
+        $product = Product::where('active', 1)->where('slug', $slug)->with('images', 'category')->firstOrFail();
 
         $related_products = Product::where('active', 1)->where('category_id', $product->category_id)->where('id', '!=', $product->id)->get();
         //dd(new ProductResource($product));

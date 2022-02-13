@@ -96,7 +96,7 @@ const CarouselMenu = ({ products, height = "500px" }) => {
                         prevEl: ".swiper-button-prev",
                     }}
                 >
-                    {products.data.map((item, key) => (
+                    {products.map((item, key) => (
                         <SwiperSlide key={key}>
                             <div className="space-y-1 text-center text-white">
                                 <img

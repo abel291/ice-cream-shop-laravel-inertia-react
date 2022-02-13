@@ -10,7 +10,6 @@ import TwoSectionItems from "./TwoSectionItems";
 import TwoSectionContactUs from "./TwoSectionContactUs";
 
 function Home(props) {
-    console.log(props)
     const data = [
         {
             path: "#",
