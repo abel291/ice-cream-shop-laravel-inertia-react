@@ -26,8 +26,9 @@ const profileRoutes = [
 ];
 const Layout = ({ children, title }) => {
     const { post, processing } = useForm();
-    const handleLogout = () => {
-        post("logout");
+    const handleLogout = (e) => {
+        e.preventDefault();
+        post("/logout");
     };
 
     return (

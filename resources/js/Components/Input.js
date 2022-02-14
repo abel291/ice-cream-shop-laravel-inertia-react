@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 
 export default function Input({
+    
     type = "text",
     placeholder,
     name,
@@ -10,6 +11,7 @@ export default function Input({
     required,
     isFocused,
     handleChange,
+    disabled
 }) {
     const input = useRef();
 
@@ -34,6 +36,7 @@ export default function Input({
                 autoComplete={autoComplete}
                 required={required}
                 onChange={(e) => handleChange(e)}
+                disabled={disabled}
             />
         </div>
     );

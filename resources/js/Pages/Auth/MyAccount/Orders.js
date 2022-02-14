@@ -8,7 +8,7 @@ import { Link } from "@inertiajs/inertia-react";
 import Layout from "./Layout";
 
 const Orders = (props) => {
-    
+    console.log(props)
     return (
         <Layout title="Ordenes">
             <table className="w-full ">
@@ -33,7 +33,7 @@ const Orders = (props) => {
                     </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
-                    {props.orders.map((order, index) => (
+                    {props.orders.data.map((order, index) => (
                         <tr key={index}>
                             <td className="py-4 px-2 font-text underline">
                                 <Link
@@ -58,7 +58,7 @@ const Orders = (props) => {
                                         Rembolsado
                                     </span>
                                 )}
-                                {order.state == "CELED" && (
+                                {order.state == "canceled" && (
                                     <span className="px-2 py-1 inline-flex leading-5 font-semibold rounded-full bg-gray-100 text-gray-800">
                                         Rembolsado
                                     </span>

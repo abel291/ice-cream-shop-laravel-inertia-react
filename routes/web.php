@@ -1,9 +1,10 @@
 <?php
 
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ShoppingCartController;
-use Illuminate\Foundation\Application;
+
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -40,7 +41,7 @@ Route::get('/product/{slug}', [PageController::class, 'product'])->name('product
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/my-account', [ProfileController::class, 'my_account'])->name('my-account');
-    Route::get('/orders', [ProfileContropller::class, 'orders'])->name('orders');
+    Route::get('/orders', [ProfileController::class, 'orders'])->name('orders');
     Route::get('/account-details', [ProfileController::class, 'account_details'])->name('account-details');
     Route::post('/account-details', [ProfileController::class, 'store_account_details'])->name('store_account_details');
     Route::get('/order-details/{order}', [ProfileController::class, 'order_details'])->name('order-details');
@@ -57,9 +58,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/shopping-cart/remove-cupon-discount', [ShoppingCartController::class, 'remove_cupon_discount'])
         ->name('remove_cupon_discount');
 
-    Route::get('/checkout', function () {
-        return Inertia::render('Checkout/Checkout');
-    })->name('checkout');
+    Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
+    Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout_store');
+
+    // Route::get('/checkout', function () {
+    //     return Inertia::render('Checkout/Checkout');
+    // })->name('checkout');
 
     // Route::get('/my-account', function () {
     //     return Inertia::render('Auth/MyAccount/MyAccount');

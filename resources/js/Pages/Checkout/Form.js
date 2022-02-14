@@ -1,10 +1,12 @@
 import { Heading3 } from "@/Components/Elements";
 import Input from "@/Components/Input";
 import Textarea from "@/Components/Textarea";
+import { usePage } from "@inertiajs/inertia-react";
 
 import React from "react";
 
 const Form = ({ data, setData }) => {
+    const { auth } = usePage().props;
     const onHandleChange = (e) => {
         let target = e.target;
         setData(target.name, target.value);
@@ -18,9 +20,22 @@ const Form = ({ data, setData }) => {
                         Nombre
                     </label>
                     <Input
-                        handleChange={onHandleChange}
-                        value={data.name}
+                        className="disabled:bg-gray-200 disabled:text-gray-400"
+                        disabled={true}
+                        value={auth.user.name}
                         name="name"
+                    />
+                </div>
+                <div>
+                    <label className="font-text text-sm" htmlFor="email">
+                        Email
+                    </label>
+                    <Input
+                        className="disabled:bg-gray-200 disabled:text-gray-400"
+                        disabled={true}
+                        value={auth.user.email}
+                        name="email"
+                        type="email"
                     />
                 </div>
                 <div>
@@ -41,17 +56,6 @@ const Form = ({ data, setData }) => {
                         handleChange={onHandleChange}
                         value={data.phone}
                         name="phone"
-                    />
-                </div>
-                <div>
-                    <label className="font-text text-sm" htmlFor="email">
-                        Email
-                    </label>
-                    <Input
-                        handleChange={onHandleChange}
-                        value={data.email}
-                        name="email"
-                        type="email"
                     />
                 </div>
             </div>
