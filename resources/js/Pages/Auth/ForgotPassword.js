@@ -59,7 +59,7 @@ export default function ForgotPassword({ status }) {
                     </div>
 
                     <div className="mt-4 flex items-center">
-                        <Button className="btn btn-md" processing={processing}>
+                        <Button  processing={processing}>
                             restablecimiento de contraseña
                         </Button>
                     </div>

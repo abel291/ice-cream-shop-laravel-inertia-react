@@ -18,14 +18,14 @@ const FlavorsList = ({ products }) => {
                     do eiusmod tempor incididunt ut labore et
                 </p>
             </div>
-            <div className="">
+            <div >
                 <div className=" grid gap-x-8 gap-y-6 md:grid-cols-2 lg:grid-cols-3">
                     {products.map((item, key) => (
                         <div key={key}>
                             <div className="title mb-2 flex">
-                                <h6 className="">{item.name}</h6>
+                                <h6 >{item.name}</h6>
                                 <div className="flex-grow border-b-2  border-dotted border-gray-700 "></div>
-                                <div className="">
+                                <div >
                                     {formatCurrency(item.price)}
                                 </div>
                             </div>

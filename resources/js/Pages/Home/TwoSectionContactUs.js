@@ -44,7 +44,7 @@ const TwoSectionContactUs = () => {
                     </form>
                 </div>
 
-                <div className="">
+                <div >
                     <Link href="#" className="btn btn-md">
                         Enviar mensaje
                     </Link>

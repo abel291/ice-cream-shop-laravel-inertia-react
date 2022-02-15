@@ -37,7 +37,7 @@ const Layout = ({ children, title }) => {
                 <div className="grid gap-y-20 md:grid-cols-12 md:gap-6">
                     <div className="space-y-6 md:col-span-3">
                         <Heading3 className="mb-6">Mi cuenta</Heading3>
-                        <div className="">
+                        <div >
                             {profileRoutes.map((item, key) => (
                                 <Link
                                     key={key}
@@ -57,7 +57,7 @@ const Layout = ({ children, title }) => {
                         <div>
                             <form onSubmit={handleLogout}>
                                 <Button
-                                    className="btn btn-md"
+                                    
                                     processing={processing}
                                 >
                                     Salir

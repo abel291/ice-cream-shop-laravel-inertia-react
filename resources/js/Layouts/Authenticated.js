@@ -92,9 +92,9 @@ export default function Authenticated({ auth, header, children }) {
                                 </div>
                             </NavLink>
 
-                            <button className="btn btn-md ">
+                            <Button >
                                 Orden
-                            </button>
+                            </Button>
                         </div>
 
                         <div className="-mr-2 flex items-center sm:hidden">

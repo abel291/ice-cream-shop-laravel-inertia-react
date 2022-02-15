@@ -10,7 +10,7 @@ export default function Button({
         <button
             type={type}
             className={
-                (processing ? " opacity-25 " : "") + "relative " + className
+                "btn btn-md " + (processing ? " opacity-25 " : "") + className
             }
             disabled={processing}
         >

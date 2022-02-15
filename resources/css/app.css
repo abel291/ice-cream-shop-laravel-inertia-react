@@ -12,13 +12,38 @@ html {
         @apply font-medium uppercase tracking-widest transition duration-150 ease-in-out;
     }
     .btn {
-        @apply title inline-block border border-gray-800 bg-white  outline-offset-0 ring-gray-600 hover:border-gray-600 hover:ring-2;
+        @apply title relative inline-block outline-offset-0;
     }
+    .btn::before,
+    .btn::after {
+        @apply absolute inset-0 border border-gray-800 transition duration-200 content-[''];
+    }
+    .btn:hover::before,
+    .btn:hover::after {
+        @apply translate-y-0 translate-x-0;
+    }
+    .btn:before {
+        @apply translate-x-0.5 translate-y-0.5;
+    }
+    .btn:after {
+        @apply -translate-x-0.5 -translate-y-0.5;
+    }
+
     .btn-md {
-        @apply px-9 py-2 text-sm;
+        @apply px-10 py-2.5 text-sm;
     }
-    
+    /* .btn > .btn-border-1 {
+        @apply absolute inset-0 translate-x-0.5 translate-y-0.5  border border-gray-800 transition duration-200;
+    }
+    .btn > .btn-border-2 {
+        @apply absolute inset-0 -translate-x-0.5 -translate-y-0.5  border border-gray-800 transition duration-200;
+    }
+    .btn:hover > .btn-border-1,
+    .btn:hover > .btn-border-2 {
+        @apply translate-y-0 translate-x-0  transition duration-200;
+    } */
 }
+
 @layer utilities {
     .py-section {
         @apply py-28;
@@ -77,9 +102,12 @@ html {
     width: 70px !important;
     height: 70px !important;
 }
-.swiper-button-next{
-    right: 0px !important;
+.swiper-button-next {
+    right: -10px !important;
 }
-.swiper-button-prev{
-    left: 0px !important;
+.swiper-button-prev {
+    left: -10px !important;
+}
+.swiper-wrapper {
+    align-items: center;
 }

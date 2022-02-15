@@ -55,7 +55,7 @@ const Form = () => {
                                     />
                                 </div>
                             </div>
-                            <Button className="btn btn-md">
+                            <Button >
                                 Enviar mensaje{" "}
                             </Button>
                         </form>

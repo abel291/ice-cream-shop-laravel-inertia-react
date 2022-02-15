@@ -92,7 +92,7 @@ const AccountDetails = (props) => {
                         />
                     </div>
                 </div>
-                <Button className="btn btn-md" processing={processing}>Guardar</Button>
+                <Button  processing={processing}>Guardar</Button>
             </form>
         </Layout>
     );

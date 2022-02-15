@@ -33,7 +33,7 @@ const SummaryPrice = ({ meta }) => {
                 <form onSubmit={handleSubmitDiscount} className="mb-3">
                     <div className="flex gap-x-2">
                         <Input
-                        className="placeholder:text-gray-300"
+                            className="placeholder:text-gray-300"
                             required={true}
                             handleChange={(e) =>
                                 applyDiscount.setData("code", e.target.value)
@@ -41,10 +41,7 @@ const SummaryPrice = ({ meta }) => {
                             placeholder="CUPON"
                             type="text"
                         />
-                        <Button
-                            processing={applyDiscount.processing}
-                            className="btn btn-md"
-                        >
+                        <Button processing={applyDiscount.processing}>
                             Aplicar cupon
                         </Button>
                     </div>
@@ -69,7 +66,7 @@ const SummaryPrice = ({ meta }) => {
                     </div>
                 )}
             </div>
-            
+
             <div className="mb-5">
                 <Heading3 className="mb-10">TOTALES DEL CARRITO</Heading3>
                 <table className="w-full">

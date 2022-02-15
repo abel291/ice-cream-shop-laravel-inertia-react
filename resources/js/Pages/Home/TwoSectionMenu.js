@@ -5,6 +5,7 @@ import TwoSection, {
 import { Link } from "@inertiajs/inertia-react";
 import React from "react";
 
+
 const TwoSectionMenu = () => {
     return (
         <TwoSection img="/img/home/img-1.jpg">
@@ -13,7 +14,7 @@ const TwoSectionMenu = () => {
                     Ice cream
                 </TwoSectionSubTitle>
                 <TwoSectionTitle>SABOR DELICIOSO</TwoSectionTitle>
-                <div className="mb-10 grid md:grid-cols-2 gap-x-14 gap-y-5 text-left">
+                <div className="mb-10 grid gap-x-14 gap-y-5 text-left md:grid-cols-2">
                     {[
                         "APPLE",
                         "BLUEBERRY",
@@ -26,16 +27,18 @@ const TwoSectionMenu = () => {
                     ].map((item) => (
                         <div key={item}>
                             <div className="title mb-2 flex">
-                                <h6 className="">{item}</h6>
+                                <h6>{item}</h6>
                                 <div className="flex-grow border-b-2  border-dotted border-gray-700 "></div>
-                                <div className="">$2</div>
+                                <div>$2</div>
                             </div>
-                            <div className="font-text text-sm">Lorem ipsum dolor es umi</div>
+                            <div className="font-text text-sm">
+                                Lorem ipsum dolor es umi
+                            </div>
                         </div>
                     ))}
                 </div>
-                <div className="">
-                    <Link href="#" className="btn btn-md">
+                <div>
+                    <Link href={route("products")} className="btn btn-md">
                         Ver Mas
                     </Link>
                 </div>

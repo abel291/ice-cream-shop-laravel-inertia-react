@@ -6,6 +6,7 @@ import { Link, usePage } from "@inertiajs/inertia-react";
 import ProfileDropdown from "./ProfileDropdown";
 import { ShoppingBagIcon } from "@heroicons/react/solid";
 import { Heading6 } from "@/Components/Elements";
+import Button from "@/Components/Button";
 
 const Navbar = () => {
     const { auth } = usePage().props;
@@ -33,9 +34,9 @@ const Navbar = () => {
     return (
         <nav className="border-b border-gray-100 bg-white ">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="flex h-24 items-center justify-between">
+                <div className="grid h-16 grid-cols-3 items-center justify-between lg:h-20">
                     <div className="flex">
-                        <div className="hidden sm:flex sm:gap-6 ">
+                        <div className="hidden lg:flex lg:gap-6 ">
                             {linksNavbar.map((item, key) => (
                                 <NavLink
                                     key={key}
@@ -45,26 +46,25 @@ const Navbar = () => {
                                     <Heading6>{item.title}</Heading6>
                                 </NavLink>
                             ))}
-                            
                         </div>
                     </div>
                     <div>
                         <Link href="/">
-                            <ApplicationLogo className="block h-14 w-auto" />
+                            <ApplicationLogo className="mx-auto block h-14 w-auto" />
                         </Link>
                     </div>
 
-                    <div className="hidden gap-6 sm:flex sm:items-center">
+                    <div className="hidden gap-6 lg:flex lg:items-center lg:justify-end ">
                         {auth.user ? (
                             <ProfileDropdown auth={auth} />
                         ) : (
-                            <Link href={route("login")} className="btn btn-md ">
+                            <Link className="btn btn-md " href={route("login")}>
                                 Login
                             </Link>
                         )}
                     </div>
 
-                    <div className="-mr-2 flex items-center sm:hidden">
+                    <div className="-mr-2 flex items-center justify-end lg:hidden">
                         <button
                             onClick={() =>
                                 setShowingNavigationDropdown(
@@ -110,7 +110,7 @@ const Navbar = () => {
             <div
                 className={
                     (showingNavigationDropdown ? "block" : "hidden") +
-                    " sm:hidden"
+                    " lg:hidden"
                 }
             >
                 <div className="space-y-1 pt-2 pb-3">

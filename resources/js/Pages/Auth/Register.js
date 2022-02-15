@@ -106,7 +106,7 @@ export default function Register() {
                     </div>
 
                     <div className="mt-4 flex items-center gap-6">
-                        <Button className="btn btn-md" processing={processing}>
+                        <Button  processing={processing}>
                             Registrar
                         </Button>
 

@@ -10,28 +10,10 @@ import TwoSectionItems from "./TwoSectionItems";
 import TwoSectionContactUs from "./TwoSectionContactUs";
 
 function Home(props) {
-    const data = [
-        {
-            path: "#",
-            text: "text-1",
-            image: "/img/home/img-6.png",
-        },
-        {
-            path: "#",
-            text: "text-2",
-            image: "/img/home/img-6.png",
-        },
-        {
-            path: "#",
-            text: "text-4",
-            image: "/img/home/img-6.png",
-        },
-    ];
-
     return (
         <AppLayout title="Inicio">
-            <div className="h-[calc(100vh-96px)] ">
-                <Carousel data={data} />
+            <div className="h-[calc(100vh-64px)] lg:h-[calc(100vh-80px)] ">
+                <Carousel banners={props.bannersProducts} />
             </div>
             <TwoSectionMenu />
             <CarouselMenu products={props.carouselProducts} />

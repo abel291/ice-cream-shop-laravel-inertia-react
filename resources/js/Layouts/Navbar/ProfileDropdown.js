@@ -23,7 +23,7 @@ const ProfileDropdown = ({ auth }) => {
 
                     <Dropdown.Content>
                         <Dropdown.Link href={route("my-account")} method="get">
-                            Mi cuentaa
+                            Mi cuenta
                         </Dropdown.Link>
                         <Dropdown.Link
                             href={route("logout")}

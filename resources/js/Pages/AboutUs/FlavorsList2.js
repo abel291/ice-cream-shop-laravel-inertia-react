@@ -12,7 +12,7 @@ const FlavorsList2 = () => {
                     Sabores de helado veganos
                 </h2>
             </div>
-            <div className="">
+            <div >
                 <div className=" grid gap-x-6 gap-y-16 md:grid-cols-2 lg:gap-y-0 lg:grid-cols-4">
                     {["APPLE", "BLUEBERRY", "STRAWBERRY", "CHOCOLATE"].map(
                         (item, key) => (

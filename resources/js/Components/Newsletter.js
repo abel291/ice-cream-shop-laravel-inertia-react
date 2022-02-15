@@ -1,5 +1,6 @@
 import React from "react";
 import ApplicationLogo from "./ApplicationLogo";
+import Button from "./Button";
 import Input from "./Input";
 
 const Newsletter = () => {
@@ -17,7 +18,7 @@ const Newsletter = () => {
                         <div className="flex-grow">
                             <Input placeholder="Ingrese su Email*" />
                         </div>
-                        <button className="btn btn-md ml-1">Enviar</button>
+                        <Button className="ml-1">Enviar</Button>
                     </div>
                 </div>
             </div>

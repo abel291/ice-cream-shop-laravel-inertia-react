@@ -38,7 +38,7 @@ const Feature = ({ product }) => {
                     quantity={data.quantity}
                     onChange={handleChangeQuantity}
                 />
-                <Button processing={processing} className="btn btn-md">
+                <Button processing={processing}>
                     Agregar al Carrito
                 </Button>
             </form>

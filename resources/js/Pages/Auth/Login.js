@@ -80,12 +80,7 @@ export default function Login({ status, canResetPassword }) {
 
                     <div className="mb-4 flex items-center gap-6">
                         <div>
-                            <Button
-                                className="btn btn-md "
-                                processing={processing}
-                            >
-                                Log in
-                            </Button>
+                            <Button processing={processing}>Log in</Button>
                         </div>
                         <div>
                             <label className="flex items-center font-text">

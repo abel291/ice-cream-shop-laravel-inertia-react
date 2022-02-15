@@ -20,7 +20,7 @@ const Checkout = (props) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        
+
         post(route("checkout_store"), { preserveScroll: true });
     };
     return (
@@ -51,11 +51,7 @@ const Checkout = (props) => {
                         privacidad.
                     </p>
                     <div onClick={handleSubmit}>
-                        <Button
-                            processing={processing}
-                            type="button"
-                            className="btn btn-md"
-                        >
+                        <Button processing={processing} type="button">
                             Realizar pedido
                         </Button>
                     </div>

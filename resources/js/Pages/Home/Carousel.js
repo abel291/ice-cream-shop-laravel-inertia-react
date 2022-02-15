@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import { Link } from "@inertiajs/inertia-react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
 
-const Carousel = ({ data, height = "500px" }) => {
+const Carousel = ({ banners, height = "500px" }) => {
     return (
         <div className="relative flex h-full  items-center overflow-hidden bg-orange-50">
             <button className="swiper-button-next   ">
@@ -33,16 +33,27 @@ const Carousel = ({ data, height = "500px" }) => {
                         prevEl: ".swiper-button-prev",
                     }}
                 >
-                    {data.map((item, key) => (
+                    {banners.map((item, key) => (
                         <SwiperSlide key={key}>
                             <div className="flex flex-col-reverse items-center md:flex-row">
                                 <div className="text-center md:w-8/12 md:pr-9 md:text-right">
-                                    <h2 className="title text-3xl md:text-4xl lg:text-6xl">
-                                        Lorem ipsum dolor sit amet consectetur
+                                    <p className="mb-2 font-script text-4xl text-gray-400">
+                                        {item.subTitle}
+                                    </p>
+                                    <h2 className="title mb-8 text-3xl md:text-4xl lg:text-5xl">
+                                        {item.title}
                                     </h2>
+                                    <p className="mb-5 font-text">
+                                        {item.sentence}
+                                    </p>
                                     <div className=" mt-6 lg:mt-10 ">
-                                        <Link href="#" className="btn btn-md ">
-                                            Ver mas
+                                        <Link
+                                            className="btn btn-md"
+                                            href={route("product", {
+                                                slug: item.slug,
+                                            })}
+                                        >
+                                            Ver Mas
                                         </Link>
                                     </div>
                                 </div>
@@ -50,8 +61,8 @@ const Carousel = ({ data, height = "500px" }) => {
                                     <img
                                         //className="object-cover w-full mx-auto"
                                         className="mb-6 inline-block h-52 max-h-96 md:h-full lg:mb-0 "
-                                        src={item.image}
-                                        alt={item.image}
+                                        src={item.img}
+                                        alt={item.img}
                                         //style={{ height: height }}
                                     />
                                 </div>

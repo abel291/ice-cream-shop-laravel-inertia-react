@@ -98,20 +98,25 @@ const CarouselMenu = ({ products, height = "500px" }) => {
                 >
                     {products.map((item, key) => (
                         <SwiperSlide key={key}>
-                            <div className="space-y-1 text-center text-white">
-                                <img
-                                    className="inline-block h-52 max-h-64  md:h-full"
-                                    src={item.img_ball}
-                                    alt={item.img_ball}
-                                />
+                            <Link href={route("product", { slug: item.slug })}>
+                                <div className="flex flex-col space-y-1 text-center text-white">
+                                    <div>
+                                        <img
+                                            className="inline-block h-52 max-h-64 md:h-full"
+                                            src={item.img_ball}
+                                            alt={item.img_ball}
+                                        />
+                                    </div>
 
-                                <Heading5>{item.name}</Heading5>
-                                <p className="font-text text-sm">
-                                    {item.description_min}
-                                </p>
-                                <Heading6>{formatCurrency(item.price)}</Heading6>
-                                
-                            </div>
+                                    <Heading5>{item.name}</Heading5>
+                                    <p className="font-text text-sm">
+                                        {item.sentence}
+                                    </p>
+                                    <Heading6>
+                                        {formatCurrency(item.price)}
+                                    </Heading6>
+                                </div>
+                            </Link>
                         </SwiperSlide>
                     ))}
                 </Swiper>

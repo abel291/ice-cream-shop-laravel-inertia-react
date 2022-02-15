@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\BannerResource;
 use App\Http\Resources\CategoryResource;
 use App\Http\Resources\ProductResource;
 use App\Http\Resources\TagResource;
+use App\Models\Banner;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Tag;
@@ -16,8 +18,10 @@ class PageController extends Controller
 {
     public function home()
     {
-        $products = Product::where('active', 1)->inRandomOrder()->take(8)->get();
 
+        $products = Product::where('active', 1)->inRandomOrder()->take(8)->get();
+        $banners = Banner::where('type', 'home')->with('product:id,slug')->where('active', 1)->get();
+        //dd($banners);
         // $products_featured  = Product::inRandomOrder()->take(8)->whereHas('category', function (Builder $query) {
         //     $query->where('type', 'menu');
         // })->get();
@@ -27,7 +31,8 @@ class PageController extends Controller
         // }])->first();
 
         return Inertia::render('Home/Home', [
-            'carouselProducts' => ProductResource::collection($products)
+            'carouselProducts' => ProductResource::collection($products),
+            'bannersProducts' => BannerResource::collection($banners)
         ]);
     }
     public function about_us()
