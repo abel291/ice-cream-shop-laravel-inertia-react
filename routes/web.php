@@ -35,8 +35,12 @@ Route::get('/contact-us', [PageController::class, 'contact_us'])->name('contact-
 Route::get('/products/{filter_type?}/{filter?}', [PageController::class, 'products'])
     ->where(['filter_type' => 'category|tag'])
     ->name('products');
-
 Route::get('/product/{slug}', [PageController::class, 'product'])->name('product');
+
+Route::get('/blog/{filter_type?}/{filter?}', [PageController::class, 'blog'])
+    ->where(['filter_type' => 'category|tag'])
+    ->name('blog');
+Route::get('/blog/{slug}', [PageController::class, 'post'])->name('post');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
@@ -51,7 +55,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::resource('shopping-cart', ShoppingCartController::class)->only([
         'index', 'store', 'destroy'
     ]);
-    
+
     Route::get('/shopping-cart/apply-cupon-discount', [ShoppingCartController::class, 'apply_cupon_discount'])
         ->name('apply_cupon_discount');
 

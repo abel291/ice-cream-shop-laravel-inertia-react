@@ -1,13 +1,14 @@
 import { formatCurrency } from "@/Helpers/helpers";
 import { Link } from "@inertiajs/inertia-react";
 import React from "react";
+import { SidebarTitle } from "./Layout";
 
-import { SidebarTitle } from "./Sidebar";
+
 
 const NewProducts = ({ products }) => {
     return (
         <div>
-            <SidebarTitle>Nuevos</SidebarTitle>
+            <SidebarTitle >Nuevos</SidebarTitle>
             {products.map((item, key) => (
                 <div key={key} className="mb-5 flex">
                     <img

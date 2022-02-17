@@ -22,7 +22,7 @@ const Navbar = () => {
             title: "Acerca de",
         },
         {
-            route: "about-us",
+            route: "blog",
             title: "Blog",
         },
         {

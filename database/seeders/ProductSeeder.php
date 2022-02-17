@@ -22,9 +22,7 @@ class ProductSeeder extends Seeder
             Product::factory()
                 ->count(3)
                 ->has(Image::factory()->count(3))
-                ->create([
-                    "category_id" => $category->id,
-                ]);
+                ->create();
         }
     }
 }

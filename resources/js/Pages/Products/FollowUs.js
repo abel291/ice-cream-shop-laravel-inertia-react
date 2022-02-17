@@ -1,11 +1,11 @@
 import SocialIcon from "@/Layouts/Footer/SocialIcon";
 import React from "react";
-import { SidebarTitle } from "./Sidebar";
+import { SidebarTitle } from "./Layout";
 
 const FollowUs = () => {
     return (
         <div>
-            <SidebarTitle>SÍGANOS</SidebarTitle>
+            <SidebarTitle >SÍGANOS</SidebarTitle>
             <SocialIcon className="flex space-x-2" />
         </div>
     );

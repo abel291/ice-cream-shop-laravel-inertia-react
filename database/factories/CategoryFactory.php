@@ -16,7 +16,7 @@ class CategoryFactory extends Factory
     {
         $name = $this->faker->word();
         return [
-            "name" => $name,
+            "name" => ucfirst($name),
             "slug" => Str::slug($name), //
             "active" => 1, //
         ];

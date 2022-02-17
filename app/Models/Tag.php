@@ -13,8 +13,16 @@ class Tag extends Model
         'slug',
 
     ];
-public function products()
+    public function products()
     {
-        return $this->belongsToMany(Product::class);
+        return $this->morphedByMany(Product::class, 'taggable');
+    }
+
+    /**
+     * Get all of the videos that are assigned this tag.
+     */
+    public function posts()
+    {
+        return $this->morphedByMany(Post::class, 'taggable');
     }
 }
