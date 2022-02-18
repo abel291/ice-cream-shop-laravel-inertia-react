@@ -23,19 +23,22 @@ const Images = ({ product }) => {
                     centeredSlides={true}
                     thumbs={{ swiper: thumbsSwiper }}
                     modules={[FreeMode, Navigation, Thumbs]}
-                    className="mySwiper2 h-[500px] bg-orange-50"
+                    className="mySwiper2 h-96 bg-orange-50 md:h-[500px]"
                     navigation={{
                         nextEl: ".swiper-button-next",
                         prevEl: ".swiper-button-prev",
                     }}
                 >
                     {product.images.map((item, key) => (
-                        <SwiperSlide key={key}>
+                        <SwiperSlide
+                            key={key}
+                            className="flex items-center justify-center"
+                        >
                             <img
                                 src={item.img}
                                 alt={item.alt}
                                 alt={item.title}
-                                className="mx-auto max-h-full max-w-full"
+                                className="max-h-full max-w-full"
                             />
                         </SwiperSlide>
                     ))}

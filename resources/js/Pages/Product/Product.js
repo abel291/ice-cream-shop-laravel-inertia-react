@@ -6,7 +6,6 @@ import Feature from "./Feature";
 import Images from "./Images";
 import RelatedProducts from "./RelatedProducts";
 const Product = (props) => {
-    console.log(props);
     return (
         <AppLayout title={props.product.name}>
             <Breadcrumbs
