@@ -645,9 +645,6 @@ select{
 .left-0{
   left: 0px;
 }
-.top-4{
-  top: 1rem;
-}
 .top-5{
   top: 1.25rem;
 }
@@ -742,11 +739,11 @@ select{
 .mb-6{
   margin-bottom: 1.5rem;
 }
-.mb-8{
-  margin-bottom: 2rem;
-}
 .mb-16{
   margin-bottom: 4rem;
+}
+.mb-8{
+  margin-bottom: 2rem;
 }
 .mb-20{
   margin-bottom: 5rem;
@@ -805,14 +802,20 @@ select{
 .h-\[400px\]{
   height: 400px;
 }
+.h-\[500px\]{
+  height: 500px;
+}
 .h-52{
   height: 13rem;
 }
 .h-\[calc\(100vh-64px\)\]{
   height: calc(100vh - 64px);
 }
-.h-\[500px\]{
-  height: 500px;
+.h-auto{
+  height: auto;
+}
+.h-28{
+  height: 7rem;
 }
 .max-h-\[500px\]{
   max-height: 500px;
@@ -825,6 +828,9 @@ select{
 }
 .max-h-full{
   max-height: 100%;
+}
+.max-h-\[400px\]{
+  max-height: 400px;
 }
 .min-h-screen{
   min-height: 100vh;
@@ -856,14 +862,14 @@ select{
 .w-28{
   width: 7rem;
 }
+.w-16{
+  width: 4rem;
+}
 .w-1\/5{
   width: 20%;
 }
 .w-4\/5{
   width: 80%;
-}
-.w-16{
-  width: 4rem;
 }
 .w-10{
   width: 2.5rem;
@@ -954,9 +960,6 @@ select{
 }
 .flex-wrap{
   flex-wrap: wrap;
-}
-.place-content-center{
-  place-content: center;
 }
 .place-items-center{
   place-items: center;
@@ -1076,11 +1079,6 @@ select{
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
-.space-y-10 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
-}
 .space-y-4 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1090,6 +1088,11 @@ select{
   --tw-space-y-reverse: 0;
   margin-top: calc(7rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(7rem * var(--tw-space-y-reverse));
+}
+.space-y-10 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
 }
 .space-y-6 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
@@ -1234,6 +1237,10 @@ select{
 .bg-green-100{
   --tw-bg-opacity: 1;
   background-color: rgb(220 252 231 / var(--tw-bg-opacity));
+}
+.bg-orange-800{
+  --tw-bg-opacity: 1;
+  background-color: rgb(154 52 18 / var(--tw-bg-opacity));
 }
 .bg-cover{
   background-size: cover;
@@ -1436,12 +1443,6 @@ select{
 }
 .leading-relaxed{
   line-height: 1.625;
-}
-.leading-3{
-  line-height: .75rem;
-}
-.leading-6{
-  line-height: 1.5rem;
 }
 .tracking-wider{
   letter-spacing: 0.05em;
@@ -2057,9 +2058,6 @@ html{
   .lg\:w-1\/2{
     width: 50%;
   }
-  .lg\:w-3\/12{
-    width: 25%;
-  }
   .lg\:w-9\/12{
     width: 75%;
   }
@@ -2068,6 +2066,9 @@ html{
   }
   .lg\:w-full{
     width: 100%;
+  }
+  .lg\:w-3\/12{
+    width: 25%;
   }
   .lg\:max-w-7xl{
     max-width: 80rem;
