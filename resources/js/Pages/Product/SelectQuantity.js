@@ -1,5 +1,5 @@
 import { MinusIcon, PlusIcon } from "@heroicons/react/solid";
-const SelectQuantity = ({ quantity=1, stock=10, onChange = () => {} }) => {
+const SelectQuantity = ({ quantity = 1, limit = 10, onChange }) => {
     return (
         <>
             <div className="inline-flex items-stretch  ">
@@ -16,7 +16,7 @@ const SelectQuantity = ({ quantity=1, stock=10, onChange = () => {} }) => {
 
                 <button
                     type="button"
-                    disabled={quantity >= stock}
+                    disabled={quantity >= limit}
                     onClick={() => onChange(quantity + 1)}
                     className="flex items-center py-1 px-3 text-black   disabled:cursor-auto disabled:text-gray-300"
                 >

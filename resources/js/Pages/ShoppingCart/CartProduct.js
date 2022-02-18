@@ -1,4 +1,5 @@
 import { Heading6 } from "@/Components/Elements";
+import ValidationErrors from "@/Components/ValidationErrors";
 import { formatCurrency } from "@/Helpers/helpers";
 import { XIcon } from "@heroicons/react/solid";
 import { useForm } from "@inertiajs/inertia-react";
@@ -69,14 +70,14 @@ const CartProduct = ({ product }) => {
                     />
                 </div>
 
-                {addProductToCart.errors.quantity && (
-                    <div className="mb-3 text-sm text-red-500 ">
-                        {addProductToCart.errors.quantity}
+                {addProductToCart.errors && (
+                    <div className="mb-3 ">
+                        <ValidationErrors errors={addProductToCart.errors} />
                     </div>
                 )}
 
                 {product.quantity > 1 && (
-                    <div className="text-sm text-gray-500 ml-3 ">
+                    <div className="ml-3 text-sm text-gray-500 ">
                         1 x {formatCurrency(product.price)}
                     </div>
                 )}

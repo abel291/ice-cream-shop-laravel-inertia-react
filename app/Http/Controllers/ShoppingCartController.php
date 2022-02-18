@@ -45,11 +45,21 @@ class ShoppingCartController extends Controller
         ]);
 
         $user = Auth::user(); //auth()->user()->with('shopping_cart');
-        $product = Product::findOrFail($request->id);
+        $product = Product::where('active', 1)->findOrFail($request->id);
 
-        $is_new_product = $user->shopping_cart->where('id', $request->id)->isEmpty();
-        $count_product = $user->shopping_cart->count();
-        if ($is_new_product && $count_product >= 10) {
+        $product_in_cart = $user->shopping_cart->where('id', $request->id)->first();
+
+        $count_product = $user->shopping_cart->sum('pivot.quantity');
+
+        if ($product_in_cart) {
+            $count_product += ($request->quantity - $product_in_cart->pivot->quantity);
+            $count_product = $count_product < 0 ? 0 : $count_product; //num negative
+        } else {
+            $count_product += $request->quantity;
+        }
+
+
+        if ($count_product > 10) {
             return Redirect::back()
                 ->withErrors(['limit' => 'El limite del carrito es de 10 productos']);
         }

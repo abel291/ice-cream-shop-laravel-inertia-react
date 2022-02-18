@@ -24,7 +24,7 @@ class ShoppingCartSeeder extends Seeder
             $array_products_quantity = [];
             foreach ($products as $key => $product) {
 
-                $quantity = rand(1, 5);
+                $quantity = 1;
                 $total_price_quantity = $product->price * $quantity;
 
                 $array_products_quantity[$product->id]['quantity'] = $quantity;
