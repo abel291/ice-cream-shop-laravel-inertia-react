@@ -30,13 +30,15 @@ class MyAccountTest extends TestCase
     public function test_account_details_store()
     {
         $user = User::first();
+        $email_updated = $this->faker->unique()->safeEmail();
         $response = $this->actingAs($user)
             ->post(route('store_account_details'), [
                 'name' => $this->faker->name(),
                 'phone' => $this->faker->phoneNumber,
                 'address' => $this->faker->address(),
                 'city' => str_replace(["'", '"'], '', $this->faker->city),
-                'email' => $this->faker->unique()->safeEmail(),
+                'email' => $email_updated,
+                'email_confirmation' => $email_updated,
             ]);
         $response->assertValid();
         $response->assertStatus(302);

@@ -40,7 +40,7 @@ Route::get('/product/{slug}', [PageController::class, 'product'])->name('product
 Route::get('/blog/{filter_type?}/{filter?}', [PageController::class, 'blog'])
     ->where(['filter_type' => 'category|tag'])
     ->name('blog');
-Route::get('/blog/{slug}', [PageController::class, 'post'])->name('post');
+Route::get('/blog/post/{slug}', [PageController::class, 'post'])->name('post');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
