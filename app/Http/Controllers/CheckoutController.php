@@ -14,8 +14,11 @@ class CheckoutController extends Controller
 {
     public function index()
     {
-        $user = Auth::user(); //auth()->user()->with('shopping_cart');
+        $user = Auth::user();
 
+        if ($user->shopping_cart->isEmpty()) { //el carrito esta vacio
+            return Redirect::route('shopping-cart.index');
+        }
         return Inertia::render('Checkout/Checkout', [
             'products' => ProductResource::collection($user->shopping_cart),
             'meta' => $user->shopping_cart_total

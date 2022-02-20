@@ -13,21 +13,11 @@ const Images = ({ product }) => {
     return (
         <div className="">
             <div className="relative mb-3">
-                <button className="swiper-button-next   ">
-                    <ChevronRightIcon className="h-full w-full bg-white text-gray-700 shadow-sm  " />
-                </button>
-                <button className="swiper-button-prev  ">
-                    <ChevronLeftIcon className="h-full w-full bg-white text-gray-700 shadow-sm  " />
-                </button>
                 <Swiper
                     centeredSlides={true}
                     thumbs={{ swiper: thumbsSwiper }}
                     modules={[FreeMode, Navigation, Thumbs]}
                     className="mySwiper2 h-96 bg-orange-50 md:h-[500px]"
-                    navigation={{
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                    }}
                 >
                     {product.images.map((item, key) => (
                         <SwiperSlide

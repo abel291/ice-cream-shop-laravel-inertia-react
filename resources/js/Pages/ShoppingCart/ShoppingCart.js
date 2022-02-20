@@ -27,7 +27,7 @@ const ShoppingCart = (props) => {
                         <p className="mb-10 mt-8 font-text">
                             Parece que aún no has hecho tu elección...
                         </p>
-                        <Link className="btn btn-md">volver a la tienda</Link>
+                        <Link href={route('products')} className="btn btn-md">volver a la tienda</Link>
                     </div>
                 ) : (
                     <>

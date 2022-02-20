@@ -24,10 +24,10 @@ const Carousel = ({ banners, height = "500px" }) => {
                     slidesPerView={1}
                     centeredSlides={true}
                     //navigation
-                    // autoplay={{
-                    //     delay: 2500,
-                    //     disableOnInteraction: false,
-                    // }}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
                     navigation={{
                         nextEl: ".swiper-button-next",
                         prevEl: ".swiper-button-prev",

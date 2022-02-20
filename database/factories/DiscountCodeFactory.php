@@ -20,7 +20,7 @@ class DiscountCodeFactory extends Factory
             'type' => $this->faker->randomElement(['amount', 'percent']),
             'value' => rand(1, 100),
             'stock' => rand(1, 100),
-            'active' => rand(1, 0),
+            'active' => 1,
         ];
     }
 }

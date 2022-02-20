@@ -13,8 +13,15 @@ class OrderFactory extends Factory
      */
     public function definition()
     {
+
         return [
-            //
+            'sub_total' => 0,
+            'total' => 0,
+            'products' => [],
+            'phone' => '',
+            'address' => '',
+            'note' => '',
+            'order' => ''
         ];
     }
 }

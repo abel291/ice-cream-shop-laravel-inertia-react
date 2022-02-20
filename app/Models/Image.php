@@ -13,6 +13,5 @@ class Image extends Model
         'name',
         'alt',
         'order',
-
     ];
 }
