@@ -11,8 +11,8 @@ import { Heading2, Heading3 } from "@/Components/Elements";
 
 export default function Login({ status, canResetPassword }) {
     const { data, setData, post, processing, errors, reset } = useForm({
-        email: "",
-        password: "",
+        email: "user@user.com",
+        password: "password",
         remember: "",
     });
 

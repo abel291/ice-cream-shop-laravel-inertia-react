@@ -111,3 +111,10 @@ html {
 .swiper-wrapper {
     align-items: center;
 }
+#nprogress .bar{
+    height: 4px !important;
+}
+#nprogress .spinner-icon{
+    width: 25px !important;
+    height: 25px !important;
+}
