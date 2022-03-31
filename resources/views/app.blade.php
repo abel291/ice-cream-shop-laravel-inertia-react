@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -18,10 +19,6 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
-        @inertia
-
-        {{-- @env ('local')
-            <script src="http://localhost:8080/js/bundle.js"></script>
-        @endenv --}}
+        @inertia 
     </body>
 </html>

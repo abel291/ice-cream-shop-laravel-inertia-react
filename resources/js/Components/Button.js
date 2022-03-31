@@ -3,14 +3,14 @@ import React from "react";
 export default function Button({
     type = "submit",
     className = "",
-    processing = false,
+    processing = true,
     children,
 }) {
     return (
         <button
             type={type}
             className={
-                "btn btn-md " + (processing ? " opacity-25 " : "") + className
+                "btn " + (processing ? " opacity-25 " : "") + className
             }
             disabled={processing}
         >
@@ -18,7 +18,7 @@ export default function Button({
                 <div className="absolute inset-0 grid place-items-center">
                     <div>
                         <svg
-                            className={" h-5 w-5 animate-spin"}
+                            className={" h-5 w-5 animate-spin text-white"}
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
