@@ -62,15 +62,19 @@ class User extends Authenticatable
         $code = session('discount_code');
         if ($code) {
             $discount = DiscountCode::where('code', $code)->where('active', true)->first();
-            if ($discount->type == 'percent') {
-                $discount->applied  = $sub_total * ($discount->value / 100);
-            } else {
-                $discount->applied  = ($sub_total < $discount->value) ? $sub_total : $discount->value ;
-            }
+            if ($discount) {
 
-            $total -= $discount->applied;
-            $total = ($total < 0) ? 0 : $total; //num positivos
+                if ($discount->type == 'percent') {
+                    $discount->applied  = $sub_total * ($discount->value / 100);
+                } else {
+                    $discount->applied  = ($sub_total < $discount->value) ? $sub_total : $discount->value;
+                }
+
+                $total -= $discount->applied;
+                $total = ($total < 0) ? 0 : $total; //num positivos
+            }
         }
+
 
         //$total += $tax_amount + $shipping;
 

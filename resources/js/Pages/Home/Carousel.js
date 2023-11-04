@@ -35,8 +35,8 @@ const Carousel = ({ banners, height = "500px" }) => {
                 >
                     {banners.map((item, key) => (
                         <SwiperSlide key={key}>
-                            <div className="flex flex-col-reverse items-center md:flex-row">
-                                <div className="text-center md:w-8/12 md:pr-9 md:text-right">
+                            <div className="flex flex-col-reverse items-center md:flex-row gap-x-12">
+                                <div className="text-center md:w-6/12 md:text-right">
                                     <p className="mb-2 font-script text-4xl text-gray-400">
                                         {item.subTitle}
                                     </p>
@@ -57,13 +57,13 @@ const Carousel = ({ banners, height = "500px" }) => {
                                         </Link>
                                     </div>
                                 </div>
-                                <div className="text-center md:w-4/12">
+                                <div className="text-center md:w-6/12">
                                     <img
                                         //className="object-cover w-full mx-auto"
-                                        className="mb-6 inline-block h-52 max-h-96 md:h-full lg:mb-0 "
+                                        className="mb-6 inline-block  max-h-96 md:h-full lg:mb-0 rounded-lg      "
                                         src={item.img}
                                         alt={item.img}
-                                        //style={{ height: height }}
+                                    //style={{ height: height }}
                                     />
                                 </div>
                             </div>

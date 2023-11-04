@@ -14,7 +14,7 @@ const TwoSectionMenu = () => {
                     Ice cream
                 </TwoSectionSubTitle>
                 <TwoSectionTitle>SABOR DELICIOSO</TwoSectionTitle>
-                <div className="mb-10 grid gap-x-14 gap-y-5 text-left md:grid-cols-2">
+                <div className="mb-10 grid gap-x-14 gap-y-5 text-left md:grid-cols-2 max-w-lg mx-auto">
                     {[
                         "APPLE",
                         "BLUEBERRY",

@@ -33,7 +33,7 @@ const Navbar = () => {
 
     return (
         <nav className="border-b border-gray-100 bg-white ">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="container mx-auto ">
                 <div className="grid h-16 grid-cols-3 items-center justify-between lg:h-20">
                     <div className="flex">
                         <div className="hidden lg:flex lg:gap-6 ">
@@ -49,7 +49,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div>
-                        <Link href="/">
+                        <Link href="/" >
                             <ApplicationLogo className="mx-auto block h-14 w-auto" />
                         </Link>
                     </div>

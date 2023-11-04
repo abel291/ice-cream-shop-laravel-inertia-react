@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
             <div>
                 <div className="relative">
                     <img
-                        className="h-full w-full rounded object-cover md:h-80 md:w-80 lg:h-60 lg:w-72"
+                        className="w-full rounded object-cover md:h-80 lg:h-60"
                         src={product.img}
                         alt={product.name}
                     />
@@ -31,9 +31,9 @@ const ProductCard = ({ product }) => {
                         </div> */}
                     </div>
                 </div>
-                <div className="pt-5 pb-10">
+                <div className="pt-5 pb-6">
                     <div className=" text-center">
-                        <Heading4 className="mb-2 w-full truncate">
+                        <Heading4 className="mb-2 w-full ">
                             {product.name}
                         </Heading4>
 

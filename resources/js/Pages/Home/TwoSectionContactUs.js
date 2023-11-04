@@ -11,7 +11,7 @@ import React from "react";
 const TwoSectionContactUs = () => {
     return (
         <TwoSection img="/img/home/img-4.jpg" reverse={true}>
-            <div className="text-center">
+            <div className="text-center max-w-lg mx-auto">
 
                 <TwoSectionSubTitle className="mb-1">
                     Contáctenos

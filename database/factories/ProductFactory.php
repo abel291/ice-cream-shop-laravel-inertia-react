@@ -26,7 +26,7 @@ class ProductFactory extends Factory
             "img" => "/img/home/img-" . rand(1, 20) . ".jpg",
             "img_ball" => "/img/home/img-bola-" . rand(1, 3) . ".png",
             "stars" => rand(4, 5),
-            "price" => rand(5, 20),
+            "price" => rand(5, 20) * 1000,
 
         ];
     }

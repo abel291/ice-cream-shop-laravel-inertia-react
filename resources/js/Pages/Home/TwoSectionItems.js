@@ -9,7 +9,7 @@ import React from "react";
 const TwoSectionItems = () => {
     return (
         <TwoSection img="/img/home/img-3.jpg">
-            <div className="text-center">
+            <div className="text-center max-w-lg mx-auto">
                 <TwoSectionTitle>LOS MEJORES HELADOS</TwoSectionTitle>
                 <TwoSectionText>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit sed

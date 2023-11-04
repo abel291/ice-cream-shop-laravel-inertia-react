@@ -55,7 +55,7 @@ const dataFake = [
 ];
 const CarouselMenu = ({ products, height = "500px" }) => {
     return (
-        <div className="overflow-hidden bg-gray-800">
+        <div className="overflow-hidden bg-gray-700">
             <div className="py-section relative mx-auto flex h-full items-center  px-10 md:max-w-7xl  lg:px-16">
                 <button className="swiper-button-next  ">
                     <ChevronRightIcon className="h-full w-full text-white " />

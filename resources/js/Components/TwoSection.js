@@ -7,14 +7,14 @@ const TwoSection = ({ img, reverse = false, children }) => {
             <div className="mx-auto">
                 <div
                     className={
-                        "flex flex-col-reverse  " +
+                        "flex flex-col-reverse items-stretch  " +
                         (reverse ? "lg:flex-row-reverse" : "lg:flex-row")
                     }
                 >
-                    <div className="w-full lg:w-1/2 ">
+                    <div className="lg:w-1/2 ">
                         <img
                             src={img}
-                            className="h-full w-full object-cover"
+                            className="max-h-full w-full h-full object-cover"
                             alt=""
                         />
                     </div>

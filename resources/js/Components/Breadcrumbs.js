@@ -3,14 +3,14 @@ import React from "react";
 const Breadcrumbs = ({ data = [] }) => {
     return (
         <div className="bg-orange-50">
-            <div className="container py-12 ">
+            <div className="container py-4 text-gray-500 ">
                 <div className="flex font-text font-medium">
                     <Link className="hover:underline" href="/">
                         Inicio
                     </Link>
                     {data.map((item, key) => (
                         <div key={key}>
-                            <span className="px-2">-</span>
+                            <span className="px-2">{">"}</span>
                             {item.path ? (
                                 <Link
                                     className="hover:underline"

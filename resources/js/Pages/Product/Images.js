@@ -14,10 +14,11 @@ const Images = ({ product }) => {
         <div className="">
             <div className="relative mb-3">
                 <Swiper
+                    spaceBetween={12}
                     centeredSlides={true}
                     thumbs={{ swiper: thumbsSwiper }}
                     modules={[FreeMode, Navigation, Thumbs]}
-                    className="mySwiper2 h-96 bg-orange-50 md:h-[500px]"
+                    className="mySwiper2 max-h-96  md:max-h-[500px]"
                 >
                     {product.images.map((item, key) => (
                         <SwiperSlide
@@ -27,8 +28,8 @@ const Images = ({ product }) => {
                             <img
                                 src={item.img}
                                 alt={item.alt}
-                                alt={item.title}
-                                className="max-h-full max-w-full"
+                                title={item.title}
+                                className=" w-full rounded-lg "
                             />
                         </SwiperSlide>
                     ))}
@@ -44,12 +45,12 @@ const Images = ({ product }) => {
                     modules={[FreeMode, Navigation, Thumbs]}
                 >
                     {product.images.map((item, key) => (
-                        <SwiperSlide key={key} className="h-28 cursor-pointer">
+                        <SwiperSlide key={key} className=" cursor-pointer">
                             <img
                                 src={item.img}
                                 alt={item.alt}
-                                alt={item.title}
-                                className=" w-full object-cover"
+                                title={item.title}
+                                className="max-w-full object-cover rounded h-28"
                             />
                         </SwiperSlide>
                     ))}

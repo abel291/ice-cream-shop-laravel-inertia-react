@@ -12,7 +12,7 @@ import TwoSectionContactUs from "./TwoSectionContactUs";
 function Home(props) {
     return (
         <AppLayout title="Inicio">
-            <div className="h-[calc(100vh-64px)] lg:h-[calc(100vh-80px)] ">
+            <div className="">
                 <Carousel banners={props.bannersProducts} />
             </div>
             <TwoSectionMenu />

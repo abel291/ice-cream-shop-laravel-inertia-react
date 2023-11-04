@@ -46,49 +46,49 @@ html {
 
 @layer utilities {
     .py-section {
-        @apply py-28;
+        @apply py-12;
     }
     .pb-section {
-        @apply pb-28;
+        @apply pb-12;
     }
     .pt-section {
-        @apply pt-28;
+        @apply pt-12;
     }
     /* //md */
     @media (min-width: 768px) {
         .py-section {
-            @apply py-32;
+            @apply py-14;
         }
         .pb-section {
-            @apply pb-32;
+            @apply pb-14;
         }
         .pt-section {
-            @apply pt-32;
+            @apply pt-14;
         }
     }
 
     /* //lg */
     @media (min-width: 1024px) {
         .py-section {
-            @apply py-36;
+            @apply py-16;
         }
         .pb-section {
-            @apply pb-36;
+            @apply pb-16;
         }
         .pt-section {
-            @apply pt-36;
+            @apply pt-16;
         }
     }
     /* //xl */
     @media (min-width: 1280px) {
         .py-section {
-            @apply py-40;
+            @apply py-20;
         }
         .pb-section {
-            @apply pb-40;
+            @apply pb-20;
         }
         .pt-section {
-            @apply pt-40;
+            @apply pt-20;
         }
     }
 }
@@ -111,10 +111,10 @@ html {
 .swiper-wrapper {
     align-items: center;
 }
-#nprogress .bar{
+#nprogress .bar {
     height: 4px !important;
 }
-#nprogress .spinner-icon{
+#nprogress .spinner-icon {
     width: 25px !important;
     height: 25px !important;
 }
